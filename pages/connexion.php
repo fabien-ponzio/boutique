@@ -1,7 +1,7 @@
 <?php 
-$database = ("db.php"); 
-require_once("db.php"); 
-require_once("user.php"); 
+$database = ('../functions/db.php');
+require_once('../functions/db.php');
+require_once('../class/user.php');
 ?>
 
 <?php 

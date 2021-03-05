@@ -7,9 +7,9 @@
 </head>
 <body>
 <?php 
-$database = ("db.php");
-require_once('db.php');
-require_once('user.php');
+$database = ('../functions/db.php');
+require_once('../functions/db.php');
+require_once('../class/user.php');
 
     if (isset($_POST['register'])) {
         $user = new User(); 

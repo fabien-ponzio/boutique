@@ -1,8 +1,9 @@
 <?php 
-$database = ("db.php");
-require_once('db.php');
-require_once('user.php');
+$database = ('../functions/db.php');
+require_once('../functions/db.php');
+require_once('../class/user.php');
 var_dump($_POST);
+var_dump($_SESSION['utilisateur']['id_utilisateurs']);
 
 ?>
 
@@ -49,7 +50,7 @@ var_dump($_POST);
 <?php
 if (isset($_POST['submit'])){
     $user = new User; 
-    $user->profile($_POST['newLogin'], $_POST['newMail'], $_POST['newPassword'], $_POST['confPassword'], $_POST['country'], $_POST['city'], $_POST['postCode'], $_POST['street'], $_POST['number']); 
+    $user->profile($_POST['newLogin'], $_POST['newMail'], $_POST['newPassword'], $_POST['confPassword'], $_POST['country'], $_POST['city'], $_POST['postCode'], $_POST['street'], $_POST['number'],  $_POST['name'], $_POST['surname']); 
 }
 ?>
 </form>

@@ -1,9 +1,9 @@
 <?php
 
-require_once('db.php'); 
+require_once('../functions/db.php'); 
 class User 
 {
-    private $id; 
+    private $id_utilisateurs; 
     public $login; 
     public $password; 
     public $email; 
@@ -84,15 +84,14 @@ echo $error_log;
 
     if (!empty($user)){
         if (password_verify($password, $user['password'])) {
-            $this->id = $user['id']; 
+
+            $this->id_utilisateurs = $user['id_utilisateurs']; 
             $this->login = $user['login']; 
             $this->password = $user['password']; 
-            $_SESSION['id_droits'] = $user['id_droits'];
-            $_SESSION['utilisateur']=$user; 
-            $_SESSION['id'] = $user['id'];
+
             $_SESSION['utilisateur'] = [
-            'id' =>
-                $this->id, 
+            'id_utilisateurs' =>
+                $this->id_utilisateurs, 
             'login' =>
                 $this->login, 
             'password' => 
@@ -110,7 +109,7 @@ echo $error_log;
 
 
 //-------------------------------------------------UPDATE-----------------------------------------------------//
-    function profile($login, $email, $password, $confirmPW, $country, $city, $postCode, $street, $number){
+    function profile($login, $email, $password, $confirmPW, $country, $city, $postCode, $street, $number, $name, $surname){
         $error_log = null; 
         $login = htmlspecialchars(trim($login)); 
         $email = htmlspecialchars(trim($email)); 
@@ -121,20 +120,26 @@ echo $error_log;
         $postCode = htmlspecialchars(trim($postCode)); 
         $street = htmlspecialchars(trim($street)); 
         $number = htmlspecialchars(trim($number)); 
+        $name = htmlspecialchars(trim($name)); 
+        $surname = htmlspecialchars(trim($surname)); 
 
-        if (!empty($login) && !empty($email) && !empty($password) && !empty($confirmPW) && !empty($country) && !empty($city) && !empty($postCode) && !empty($street) && !empty($number)){
+
+        if (!empty($login) && !empty($email) && !empty($password) && !empty($confirmPW) && !empty($country) && !empty($city) && !empty($postCode) && !empty($street) && !empty($number)&& !empty($name)&& !empty($surname)){
            $logLength = strlen($login); 
            $emailLength = strlen($email); 
            $passLength = strlen($password); 
            $confirmLength = strlen($confirmPW); 
            $countryLength = strlen($country);
            $cityLength = strlen($city);
-           $streetLength = strlen($street); 
+           $streetLength = strlen($street);
+           $nameLength = strlen($name); 
+           $surnameLength = strlen($surname); 
+ 
 
-            if (($logLength >=5) && ($emailLength >=5) && ($passLength >=5) && ($confirmLength >=5) && ($countryLength >=3) && ($cityLength >= 3) && ($streetLength >=5)) {
-                $myID = $_SESSION['id']; 
-                $select = $this->db->prepare("SELECT * FROM utilisateurs WHERE id= :myID"); 
-                $select->bindValue(":myID", $_SESSION['utilisateur']['id']); 
+            if (($logLength >=5) && ($emailLength >=5) && ($passLength >=5) && ($confirmLength >=5) && ($countryLength >=3) && ($cityLength >= 3) && ($streetLength >=5) && ($nameLength >=5) && ($surnameLength >=5) ) {
+                $myID = $_SESSION['utilisateur']['id_utilisateurs']; 
+                $select = $this->db->prepare("SELECT * FROM utilisateurs WHERE id_utilisateurs= :myID"); 
+                $select->bindValue(":myID", $_SESSION['utilisateur']['id_utilisateurs']); 
                 var_dump($_SESSION); 
                 $select->execute(); 
                 $fetch = $select->fetch(); 
@@ -143,17 +148,20 @@ echo $error_log;
 
                     echo"bosssssssss"; 
                     $cryptedpass = password_hash($password, PASSWORD_ARGON2I); // CRYPTEDDD
-                    $update = $this->db->prepare("UPDATE utilisateurs SET login = :login, password = :cryptedpass, email= :mail, Pays = :country, Ville = :city, Code_postal = :postCode, Rue = :street, Numéro= :number WHERE id = :myID");
+                    $update = $this->db->prepare("UPDATE utilisateurs SET login = :login, password = :cryptedpass, email= :mail, pays = :country, ville = :city, code_postal = :postCode, rue = :street, numero= :number, nom = :name, prenom = :surname WHERE id_utilisateurs = :myID");
 
                     $update->bindValue(":login", $login, PDO::PARAM_STR); 
                     $update->bindValue(":cryptedpass", $cryptedpass, PDO::PARAM_STR); 
-                    $update->bindValue(":myID", $_SESSION['utilisateur']['id'], PDO::PARAM_INT); 
+                    $update->bindValue(":myID", $_SESSION['utilisateur']['id_utilisateurs'], PDO::PARAM_INT); 
                     $update->bindValue(":mail", $email, PDO::PARAM_STR); 
                     $update->bindValue(":country", $country, PDO::PARAM_STR); 
                     $update->bindValue(":city", $city, PDO::PARAM_STR); 
                     $update->bindValue(":street", $street, PDO::PARAM_STR); 
                     $update->bindValue(":postCode", $postCode, PDO::PARAM_STR); 
-                    $update->bindValue(":number", $number, PDO::PARAM_INT); 
+                    $update->bindValue(":number", $number, PDO::PARAM_INT);
+                    $update->bindValue(":name", $name, PDO::PARAM_STR); 
+                    $update->bindValue(":surname", $surname, PDO::PARAM_STR); 
+ 
 
                     $update->execute();
 
