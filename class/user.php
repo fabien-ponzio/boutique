@@ -179,4 +179,12 @@ echo $error_log;
 
     echo $error_log; 
     }
+// ------------------------------------------------------- DECONNEXION ----------------------------------------- // 
+    public function Disconnect(){
+        session_unset(); 
+        session_destroy(); 
+        header('location:../pages/profil.php'); 
+    }
 }
+
+

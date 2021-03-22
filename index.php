@@ -15,7 +15,9 @@ $db = connect();
 </head>
 <body>
     <?php 
-    var_dump($db); 
+        while ($ <= 10) {
+            # code...
+        }
     ?>
 </body>
 </html>
