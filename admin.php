@@ -4,7 +4,7 @@ require 'traitement/traitement-admin.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,11 @@ require 'traitement/traitement-admin.php';
 <header>
 </header>
 <main>
-<form action="/traitement-admin.php" method="post">
+<form action=traitement/traitement-ajout-article.php method="POST">
+
+
+
+
     <div>
         <label for="nom">Nom article</label>
         <input type="text"id="nom" name="nom">
@@ -31,17 +35,48 @@ require 'traitement/traitement-admin.php';
         <input type="text"id="prix" name="prix">
 
     </div>
-    <label for="categorie">choisir une categorie</label>
-    <select name="categorie" id="categorie">
+    <div>
+        <label for="categorie">choisir une categorie</label>
+        <select name="categorie" id="categorie">
         <option value="">choisir une categorie</option>
         <?php for($i=0; $i<count($categories); $i++ ):?>
         <option value="<?=$categories[$i]["id_categorie"]?>"><?=$categories[$i]["nom"]?></option>
         <?php endfor ;?>
-    </select>
-      
-    
+        </select>
 
+    </div>
     <div>
+    <label for="souscategorie">souscategorie</label>
+        <select name="souscategorie" id="souscategorie">
+            <option value="">choisir une sous categorie</option>
+            <?php for($i=0; $i<count($sscategories);$i++): ?>
+                <option value="<?=$sscategories[$i]["id_sscategorie"]?>"><?=$sscategories[$i]["nom"]?></option>
+            <?php endfor ;?>
+        </select>
+        <label for="taille">taille</label>
+            <select name="taille" id="taille">
+                <option value="">choisir ca taille</option>
+                      <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                </select>
+                <label for="couleur">couleur</label>
+                    <select name="couleur" id="couleur">
+                        <option value="">choisir les couleur</option>
+                        <option value="noir">noir</option>
+                        <option value="blanc">blanc</option>
+
+                        </select>
+
+            
+
+      
+    </div>
+    <div>
+    <input type="submit" value="Envoyer" />
+    
+    </div>
     
         
     
