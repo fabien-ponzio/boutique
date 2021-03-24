@@ -1,15 +1,13 @@
 <?php
-require 'db.php';
+require '../boutique/functions/db.php';
 $database=connect();
 //execution de la requette
 $requette=$database->prepare("SELECT * FROM `articles`");
 $requette->execute();
 $article=$requette->fetchAll(PDO::FETCH_ASSOC);
 var_dump(($article));
-
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,11 +45,8 @@ for($i=0;$i<count($article); $i++):?>
 <td><?php echo $article[$i]["nom"]?></td>
 <td><?php echo $article[$i]["prix"]?></td>
 <td> <button>supprimer</button> </td>
-<td> </td>
 </tr>
 <?php endfor;?>
-
-    
 
 </tbody>
 

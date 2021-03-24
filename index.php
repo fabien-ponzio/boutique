@@ -1,6 +1,7 @@
 <?php 
 //co db
 $database = ("db.php");
+require_once('header.php'); 
 require_once("db.php"); 
 $db = connect(); 
 ?>

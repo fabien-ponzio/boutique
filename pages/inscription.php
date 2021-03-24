@@ -10,6 +10,8 @@
 $database = ('../functions/db.php');
 require_once('../functions/db.php');
 require_once('../class/user.php');
+require_once('header.php'); 
+
 
     if (isset($_POST['register'])) {
         $user = new User(); 

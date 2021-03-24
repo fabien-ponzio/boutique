@@ -2,6 +2,7 @@
 $database = ('../functions/db.php');
 require_once('../functions/db.php');
 require_once('../class/user.php');
+require_once('header.php'); 
 ?>
 
 <?php 

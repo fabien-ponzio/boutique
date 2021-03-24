@@ -1,4 +1,8 @@
 <?php
+require_once('../class/categories.php'); 
+$categorie = new Categories(); 
+$nameCategories = $categorie->getCategories(); 
+//var_dump($nameCategories); 
 ?> 
 
 <!DOCTYPE html>
@@ -22,7 +26,36 @@
             <li><a href="inscription.php">Inscription</a></li>
             <li><a href="connexion.php">Connexion</a></li>
             <li><a href="profil.php">Profil</a></li>
-            <li><a href="#">Articles</a></li>
+            <!-- DROPDOWWWWWWWWWWWWN -->
+            <?php 
+            foreach ($nameCategories as $nameCategorie) {
+                $id_category = $nameCategorie['id_categorie'];
+            ?>
+            <div class="dropdown"> 
+                <button class="dropbtn">
+                <a href="categories.php?id=<?= $id_category ?>">
+                <?= $nameCategorie ["nom_categorie"]?>
+                </a>
+                </button>
+                <div class="dropdown-content">
+                    <?php $sousCategory = $categorie->getSouscategories($id_category);
+                    var_dump($sousCategory);
+                    foreach($sousCategory as $sousCat){?>
+                    <a href="souscategories.php?id=<?= $sousCat["id_sscategorie"] ?>"><?= $sousCat['nom'] ?></a>
+                    <?php 
+                    }
+                    ?>
+                </div>
+            </div>
+            <?php }?>
+            <div class="dropdown">
+                <button class="dropbtn">Catégorie</button>
+                <div class="dropdown-content">
+                    <a href="#">Cargo</a>
+                    <a href="#">Chino</a>
+                    <a href="#">Jean</a>
+                </div>
+            </div>
             <li><a href="#">Panier</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Index</a></li>
