@@ -9,7 +9,7 @@ require_once('../class/categories.php');
 
 $categorie = new Categories(); 
 $allCategories = $categorie->AllCategories(); 
-var_dump($allCategories); 
+// var_dump($allCategories); 
 ?>
 
 <!DOCTYPE html>

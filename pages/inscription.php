@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<?php 
-$database = ('../functions/db.php');
-require_once('../functions/db.php');
-require_once('../class/user.php');
-require_once('header.php'); 
-
-
-    if (isset($_POST['register'])) {
+<?php
+if (isset($_POST['register'])) {
         $user = new User(); 
         $user->register($_POST['login'],$_POST['email'],$_POST['password'],$_POST['confirmPW']); 
         $_SESSION['user']=$user; 
     }
-// TRAITER LA FONCTION REGISTER DE NOTRE CLASS USER ICI 
+$database = ('../functions/db.php');
+require_once('../functions/db.php');
+require_once('../class/user.php');
+require_once('header.php'); 
 ?>
-    <main>
+
+    <main class="main_content">
+        <div>
         <form action="" method="POST">
 
             <label for="login">login</label>
@@ -32,8 +23,8 @@ require_once('header.php');
             <label for="confirmPW">Confirm</label>
             <input type="password" name="confirmPW">
             <input type="submit" name="register" value="go!">
-
         </form>
+        </div>
     </main>
 </body>
 </html>

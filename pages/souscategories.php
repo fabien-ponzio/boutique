@@ -27,7 +27,7 @@ foreach($Items as $article){?>
 <span><?= $article['taille']?></span>
 <span><?= $article['prix']?></span>
 <?php $Pictures = $categorie->getPictures($article['id_article']); //var_dump($Pictures); ?>
-    <img src="../<?= $Pictures['chemin_image']?>" alt="#">
+    <a href="items.php?id=<?=$article['id_article']?>"><img src="../<?= $Pictures['chemin_image']?>" alt="#"></a>
 </div>
 <?php
 

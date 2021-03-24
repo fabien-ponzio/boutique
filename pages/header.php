@@ -14,6 +14,8 @@ $nameCategories = $categorie->getCategories();
     <link rel="stylesheet" href="../CSS/header.css">
     <!-- LINK FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK ITEMS.CSS -->
+    <link rel="stylesheet" href="../CSS/items.css">
 
     <title>Document</title>
 </head>
@@ -39,7 +41,7 @@ $nameCategories = $categorie->getCategories();
                 </button>
                 <div class="dropdown-content">
                     <?php $sousCategory = $categorie->getSouscategories($id_category);
-                    var_dump($sousCategory);
+                    // var_dump($sousCategory);
                     foreach($sousCategory as $sousCat){?>
                     <a href="souscategories.php?id=<?= $sousCat["id_sscategorie"] ?>"><?= $sousCat['nom'] ?></a>
                     <?php 
@@ -48,29 +50,20 @@ $nameCategories = $categorie->getCategories();
                 </div>
             </div>
             <?php }?>
-            <div class="dropdown">
-                <button class="dropbtn">Catégorie</button>
-                <div class="dropdown-content">
-                    <a href="#">Cargo</a>
-                    <a href="#">Chino</a>
-                    <a href="#">Jean</a>
-                </div>
-            </div>
             <li><a href="#">Panier</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Index</a></li>
         </ul>
 
     <div class="social_media">
-
         <ul>
             <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
         </ul>
-
     </div>
-
     </div>
 </div> 
+
+
 
