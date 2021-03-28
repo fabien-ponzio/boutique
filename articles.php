@@ -20,42 +20,41 @@ var_dump(($article));
 </head>
 <body>
 <header>
+</header>
 
 <main>
 
-<thead>
-<table>
-<tr>
-<th>article</th>
+        
+    <table>
+        <thead>
+            <tr>
+                <th>article</th>
+            </tr>
 
-</tr>
-
-</thead>
-<tbody>
-<tr>
-<td>nom de article</td>
-<td>prix</td>
-<td>modifier</td>
-<td>suprimer</td>
-
-
-
-</tr>
-<?php
-for($i=0;$i<count($article); $i++):?>
-<tr>
-<td><?php echo $article[$i]["nom"]?></td>
-<td><?php echo $article[$i]["prix"]?></td>
-<td> <button>supprimer</button> </td>
-<td> </td>
-</tr>
-<?php endfor;?>
+        </thead>
+        <tbody>
+            <tr>
+                <td>nom de article</td>
+                <td>prix</td>
+                <td>modifier</td>
+                <td>suprimer</td>
+            </tr>
+            <?php
+                for($i=0;$i<count($article); $i++):?>
+             <tr>
+                <td><?php echo $article[$i]["nom"]?></td>
+                <td><?php echo $article[$i]["prix"]?></td>
+                <td> <button><a href="modif.article.php?id=<?= $article[$i]["id_article"]?>">modifier</a></button></td>
+                <td> <button><a href="traitement/suprimer-article.php?id=<?=$article[$i]["id_article"]?>">supprimer</a> supprimer</button> </td>
+                <td> </td>
+            </tr>
+            <?php endfor;?>
 
     
 
-</tbody>
+        </tbody>
 
-</header>
+    </table>
 
 
 
