@@ -11,20 +11,23 @@ require_once('header.php');
 ?>
 
     <main class="main_content">
-        <div>
         <form action="" method="POST">
-
-            <label for="login">login</label>
+        <div id = "register_content">
+            <label for="login">Login</label>
             <input type="text" name="login">
-            <label for="email">email</label>
+
+            <label for="email">E-Mail</label>
             <input type="email" name="email">
-            <label for="password" name="password">mdp</label>
+
+            <label for="password" name="password">Mot de Passe</label>
             <input type="password" name="password">
-            <label for="confirmPW">Confirm</label>
+
+            <label for="confirmPW">Confirmez votre mot de passe</label>
             <input type="password" name="confirmPW">
+
             <input type="submit" name="register" value="go!">
-        </form>
         </div>
+        </form>
     </main>
 </body>
 </html>

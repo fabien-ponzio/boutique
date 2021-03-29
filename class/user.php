@@ -183,7 +183,7 @@ echo $error_log;
     public function Disconnect(){
         session_unset(); 
         session_destroy(); 
-        header('location:../pages/profil.php'); 
+        header('location:connexion.php'); 
     }
 }
 

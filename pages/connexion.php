@@ -12,7 +12,7 @@ if (isset($_POST["connect"])) {
 
 
 <main class="main_content">
-    <div>
+<div class="test">
     <form action="" method="POST">
         <label for="login">login</label>
         <input type="text" name="login">
@@ -22,5 +22,5 @@ if (isset($_POST["connect"])) {
 
         <input type="submit" name="connect" value="go!">
     </form>
-    </div>
+</div>
 </main>

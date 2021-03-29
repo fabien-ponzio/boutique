@@ -9,45 +9,47 @@ var_dump($_SESSION['utilisateur']['id_utilisateurs']);
 ?>
 
 <main>
+<div id="profile_content">
 <h1>Adresse</h1>
-<form action="profil.php" method="POST">
+    <form action="profil.php" method="POST">
 
-<label for="country">Pays</label>
-<input type="text" name="country">
+    <label for="country">Pays</label>
+    <input type="text" name="country">
 
-<label for="city">Ville</label>
-<input type="text" name="city">
+    <label for="city">Ville</label>
+    <input type="text" name="city">
 
-<label for="postCode">Code postal</label>
-<input type="text" name="postCode">
+    <label for="postCode">Code postal</label>
+    <input type="text" name="postCode">
 
-<label for="street">Rue</label>
-<input type="text" name="street">
+    <label for="street">Rue</label>
+    <input type="text" name="street">
 
-<label for="number">Numéro de rue</label>
-<input type="number" name="number">
+    <label for="number">Numéro de rue</label>
+    <input type="number" name="number">
 
-<h1>Infos client</h1>
+    <h1>Infos client</h1>
 
-<label for="name">Nom</label>
-<input type="text" name="name">
+    <label for="name">Nom</label>
+    <input type="text" name="name">
 
-<label for="surname">Prénom</label>
-<input type="text" name="surname">
+    <label for="surname">Prénom</label>
+    <input type="text" name="surname">
 
-<label for="newLogin">Nouveau Pseudo</label>
-<input type="text" name="newLogin">
+    <label for="newLogin">Nouveau Pseudo</label>
+    <input type="text" name="newLogin">
 
-<label for="newMail">Nouvelle adresse mail</label>
-<input type="email" name="newMail">
+    <label for="newMail">Nouvelle adresse mail</label>
+    <input type="email" name="newMail">
 
-<label for="oldPassword">Nouveau Mot de passe</label>
-<input type="password" name="newPassword">
+    <label for="oldPassword">Nouveau Mot de passe</label>
+    <input type="password" name="newPassword">
 
-<label for="newPassword">Confirmation du mot de passe</label>
-<input type="password" name="confPassword">
+    <label for="newPassword">Confirmation du mot de passe</label>
+    <input type="password" name="confPassword">
 
-<input type="submit" name="submit" value="Envoyer">
+    <input type="submit" name="submit" value="Envoyer">
+</div>
 <?php
 if (isset($_POST['submit'])){
     $user = new User; 
