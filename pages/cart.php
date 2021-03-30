@@ -1,7 +1,7 @@
 <?php 
 require_once('header.php'); 
 var_dump($_SESSION);
-    var_dump($_SESSION['panier']); 
+    // var_dump($_SESSION['panier']); 
     // array keys(fonction php qui permet de récuper les index du tableau session) nous permet de récuperer les index de le session panier 
 
     $ids = array_keys($_SESSION['panier']);
@@ -10,10 +10,10 @@ var_dump($_SESSION);
         $products=array(); 
     }else {
         $products = $db->prepare('SELECT * FROM articles AS A INNER JOIN image_article AS I ON A.id_article = I.id_article WHERE A.id_article IN ('.implode(',',$ids).')');
-        var_dump($products);  
+        // var_dump($products);  
         $products -> execute(); 
         $selectInfos = $products->fetchAll(PDO::FETCH_OBJ); 
-        var_dump($selectInfos); 
+        // var_dump($selectInfos); 
     }
 
 ?>
@@ -25,12 +25,12 @@ var_dump($_SESSION);
                 <table>
                     <thead>
                         <tr>
-                            <th>article</td>
-                            <th>titre</td>
-                            <th>prix unité</td>
-                            <th>quantité</td>
-                            <th>modifier</td>
-                            <th>sous-total</td>
+                            <th>Article</td>
+                            <th>Titre</td>
+                            <th>Prix Unitaire</td>
+                            <th>Quantité</td>
+                            <th>Nombre d'Articles</td>
+                            <th>Sous-Total</td>
                             <th id="supp">SUPP</td>
                         </tr>
                     </thead>

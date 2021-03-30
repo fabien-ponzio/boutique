@@ -9,7 +9,10 @@ var_dump($_SESSION['utilisateur']['id_utilisateurs']);
 ?>
 
 <main>
-<div id="profile_content">
+<div class="wrapper">
+    <div class="border"></div>
+    <div class="main-element">
+
 <h1>Adresse</h1>
     <form action="profil.php" method="POST">
 
@@ -49,6 +52,8 @@ var_dump($_SESSION['utilisateur']['id_utilisateurs']);
     <input type="password" name="confPassword">
 
     <input type="submit" name="submit" value="Envoyer">
+</div>
+</div>
 </div>
 <?php
 if (isset($_POST['submit'])){

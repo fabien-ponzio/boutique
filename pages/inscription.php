@@ -10,24 +10,40 @@ require_once('../class/user.php');
 require_once('header.php'); 
 ?>
 
-    <main class="main_content">
-        <form action="" method="POST">
-        <div id = "register_content">
-            <label for="login">Login</label>
-            <input type="text" name="login">
+    <main>
 
-            <label for="email">E-Mail</label>
-            <input type="email" name="email">
+<div class="wrapper">
 
-            <label for="password" name="password">Mot de Passe</label>
-            <input type="password" name="password">
+    <div class="border"> </div>
 
-            <label for="confirmPW">Confirmez votre mot de passe</label>
-            <input type="password" name="confirmPW">
+        <div class="main-element">
+            
+            <form id="registerForm" action="" method="POST">
+                <div>
+                    <label for="login">Login</label>
+                    <input type="text" name="login">
+                </div>
+                <div>
+                    <label for="email">E-Mail</label>
+                    <input class="form_input" type="email" name="email">
+                </div>
+                <div>
+                    <label for="password" name="password">Mot de Passe</label>
+                    <input class="form_input" type="password" name="password">
+                </div>
+                <div>
+                    <label for="confirmPW">Confirmez votre mot de passe</label>
+                    <input class="form_input" type="password" name="confirmPW">
+                </div>
+                <div>
+                    <input class="form_input" type="submit" name="register" value="go!">
+                </div>
+            </form>
 
-            <input type="submit" name="register" value="go!">
         </div>
-        </form>
+
+  </div>
+
     </main>
 </body>
 </html>

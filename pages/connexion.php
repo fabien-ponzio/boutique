@@ -11,8 +11,12 @@ if (isset($_POST["connect"])) {
 ?>
 
 
-<main class="main_content">
-<div class="test">
+<main
+>
+    <div class="wrapper">
+    <div class="border"></div>
+    <div class="main-element">
+
     <form action="" method="POST">
         <label for="login">login</label>
         <input type="text" name="login">
@@ -22,5 +26,8 @@ if (isset($_POST["connect"])) {
 
         <input type="submit" name="connect" value="go!">
     </form>
+
+</div>
+</div>
 </div>
 </main>
