@@ -5,7 +5,7 @@ $database=connect();
 $requette=$database->prepare("SELECT * FROM `articles`");
 $requette->execute();
 $article=$requette->fetchAll(PDO::FETCH_ASSOC);
-var_dump(($article));
+
 
 
 
