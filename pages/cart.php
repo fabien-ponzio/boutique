@@ -1,7 +1,7 @@
 <?php 
 require_once('header.php'); 
 var_dump($_SESSION);
-    // var_dump($_SESSION['panier']); 
+    var_dump($_SESSION['panier']); 
     // array keys(fonction php qui permet de récuper les index du tableau session) nous permet de récuperer les index de le session panier 
 
     $ids = array_keys($_SESSION['panier']);
@@ -72,6 +72,11 @@ var_dump($_SESSION);
     </table>
     </form>
     </section>
+
+    <form action="../payement.php" method="POST">
+        <input type="hidden" name="montant" value="<?= $panier->sub_total($infos->prix, $_SESSION['panier'][$infos->id_article]) ?>">
+        <input type="submit">
+    </form>
     </main>
 </body>
 

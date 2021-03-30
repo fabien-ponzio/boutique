@@ -185,6 +185,5 @@ echo $error_log;
         session_destroy(); 
         header('location:connexion.php'); 
     }
+
 }
-
-

@@ -40,12 +40,9 @@ if (isset($_POST['deconnexion'])) {
     <div class="sidebar">
 
         <h2>Double Bouclier</h2>
-        <!-- SI UTILISATEUR CONNECTé -->
         <?php if (isset($_SESSION['utilisateurs'])){
         }?>
         <ul>
-            <li><a href="cart.php">Panier <?= $panier->count()?></a></li>
-            <li><a href="inscription.php">Inscription</a></li>
             <li><a href="connexion.php">Connexion</a></li>
             <li><a href="profil.php">Profil</a></li>
             <!-- DROPDOWWWWWWWWWWWWN -->
@@ -88,6 +85,3 @@ if (isset($_POST['deconnexion'])) {
     </div>
     </div>
 </div> 
-
-
-

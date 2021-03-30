@@ -10,9 +10,11 @@ $categories=$requette->fetchAll(PDO::FETCH_ASSOC);
 $requette1=$database->prepare('SELECT * FROM `sscategorie`' );
 $requette1->execute();
 $sscategories=$requette1->fetchAll(PDO::FETCH_ASSOC);
-var_dump($sscategories);
+
+$requette2=$database->prepare("SELECT * FROM `color` ");
+$requette2->execute();
+$color=$requette2->fetchAll(PDO::FETCH_ASSOC);
 
 
-var_dump($categories);
 
 ?>
