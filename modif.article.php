@@ -7,6 +7,7 @@ require "traitement/traitement.categorie.php";
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>modification article</title>
 </head>
@@ -16,7 +17,7 @@ require "traitement/traitement.categorie.php";
 </header>
 <main>
     <form action="traitement/traitement-modif-article.php?id=<?= $_GET["id"]?>"method="POST">
-        <div>
+        <div class="form-group">
             <label for="article">non de article</label>
             <input type="text"id="article"name="nom">
 
@@ -69,7 +70,7 @@ require "traitement/traitement.categorie.php";
 
             </select>
         </div>        
-        <input type="submit" value="Envoyer" />
+        <input class="btn btn-default" type="submit" value="Envoyer" />
 
     </form>
     

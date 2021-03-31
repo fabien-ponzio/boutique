@@ -9,6 +9,7 @@ require 'traitement/traitement-admin.php';
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admine</title>
 </head>
@@ -18,12 +19,13 @@ require 'traitement/traitement-admin.php';
 </header>
 <main>
 <?php
-if(isset($_SESSION["sucess"])){
-    echo $_SESSION["succes"];
+if(isset($_SESSION["succes"])){
+    echo $_SESSION ["succes"];
+    
 }
 
 if(isset($_SESSION["erreur"])){
-    echo $_SESSION["erreur"];
+    echo $_SESSION ["erreur"];
 }
 
 ?>
@@ -32,7 +34,7 @@ if(isset($_SESSION["erreur"])){
 
 
 
-        <div>
+        <div class="form-group">
             <label for="nom">Nom article</label>
             <input type="text"id="nom" name="nom">
         </div>
@@ -77,7 +79,7 @@ if(isset($_SESSION["erreur"])){
                     </select>
         </div>
         <div>
-             <input type="submit" value="Envoyer" />
+             <input class="btn btn-default" type="submit" value="Envoyer" />
     
         </div>
     </form>
