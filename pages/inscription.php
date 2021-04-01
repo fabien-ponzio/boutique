@@ -4,10 +4,21 @@ if (isset($_POST['register'])) {
         $user->register($_POST['login'],$_POST['email'],$_POST['password'],$_POST['confirmPW']); 
         $_SESSION['user']=$user; 
     }
+//REQUIRE
 $database = ('../functions/db.php');
 require_once('../functions/db.php');
 require_once('../class/user.php');
+// PATH PAGES 
+$path_index="../index.php"; 
+$path_inscription = ""; 
+$path_connexion = "connexion.php";
+$path_profil ="profil.php"; 
+$path_cart = "cart.php"; 
+$path_items ="items.php";  
+$path_categories="categories.php"; 
+$path_souscategories="souscategories.php"; 
 require_once('header.php'); 
+
 ?>
 
     <main>

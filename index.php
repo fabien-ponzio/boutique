@@ -1,9 +1,24 @@
 <?php 
 //co db
-$database = ("db.php");
-require_once('header.php'); 
-require_once("db.php"); 
-$db = connect(); 
+require_once('class/categories.php'); 
+require_once('class/panier.php'); 
+// require_once('functions/db.php'); 
+require_once('class/user.php'); 
+
+
+// require_once("functions/db.php"); 
+// $database = ("functions/db.php");
+// $db = connect(); 
+// PATH PAGES 
+$path_index =""; 
+$path_inscription = "pages/inscription.php"; 
+$path_connexion = "pages/connexion.php";
+$path_profile ="pages/profil.php"; 
+$path_cart = "pages/cart.php"; 
+$path_items ="pages/items.php";  
+$path_categories="pages/categories.php"; 
+$path_souscategories="pages/souscategories.php"; 
+require_once('pages/header.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -15,10 +30,6 @@ $db = connect();
     <title>Document</title>
 </head>
 <body>
-    <?php 
-        while ($ <= 10) {
-            # code...
-        }
-    ?>
+
 </body>
 </html>

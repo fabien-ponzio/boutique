@@ -2,6 +2,15 @@
 $database = ('../functions/db.php');
 require_once('../functions/db.php');
 require_once('../class/user.php');
+//PATH_PAGES
+$path_index="../index.php"; 
+$path_inscription = "inscription.php"; 
+$path_connexion = "connexion.php";
+$path_profil ="profil.php"; 
+$path_cart = "cart.php"; 
+$path_items ="";  
+$path_categories="categories.php"; 
+$path_souscategories="souscategories.php";
 require_once('header.php'); 
 var_dump($_POST);
 var_dump($_SESSION['utilisateur']['id_utilisateurs']);
@@ -31,27 +40,45 @@ var_dump($_SESSION['utilisateur']['id_utilisateurs']);
     <label for="number">Numéro de rue</label>
     <input type="number" name="number">
 
+
     <h1>Infos client</h1>
 
-    <label for="name">Nom</label>
+    <div class="row">
+        <div class="column">
+    <label for="name">Nom</label><br>
     <input type="text" name="name">
-
-    <label for="surname">Prénom</label>
+        </div>
+        <div class="column" >
+    <label for="surname">Prénom</label><br>
     <input type="text" name="surname">
+        </div>
+    </div>
 
-    <label for="newLogin">Nouveau Pseudo</label>
-    <input type="text" name="newLogin">
+    <div class="row">
+        <div class="column">
+    <label for="newLogin">Nouveau login</label><br>
+    <input type="text" name="name">
+        </div>
+        <div class="column" >
+    <label for="newMail">Nouveau mail</label><br>
+    <input type="text" name="surname">
+        </div>
+    </div>
 
-    <label for="newMail">Nouvelle adresse mail</label>
-    <input type="email" name="newMail">
+    <div class="row">
+        <div class="column">
+    <label for="name">Nouveau password</label><br>
+    <input type="text" name="name">
+        </div>
+        <div class="column" >
+    <label for="surname">Confirmation du mot de passe</label><br>
+    <input type="text" name="surname">
+        </div>
+    </div>
+    <div>
+        <input type="submit" name="submit" value="Envoyer">
+    </div>
 
-    <label for="oldPassword">Nouveau Mot de passe</label>
-    <input type="password" name="newPassword">
-
-    <label for="newPassword">Confirmation du mot de passe</label>
-    <input type="password" name="confPassword">
-
-    <input type="submit" name="submit" value="Envoyer">
 </div>
 </div>
 </div>

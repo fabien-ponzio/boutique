@@ -1,4 +1,13 @@
 <?php 
+// PATH PAGES 
+$path_index ="../index.php"; 
+$path_inscription = "inscription.php"; 
+$path_connexion = "connexion.php";
+$path_profil ="profil.php"; 
+$path_cart = ""; 
+$path_items ="items.php";  
+$path_categories="categories.php"; 
+$path_souscategories="souscategories.php"; 
 require_once('header.php'); 
 var_dump($_SESSION);
     var_dump($_SESSION['panier']); 
@@ -59,7 +68,7 @@ var_dump($_SESSION);
                         $sub_total = $panier->sub_total($infos->prix, $_SESSION['panier'][$infos->id_article]);?>
                         <?= $sub_total ?>
                     </td>
-                    <td><a href="cart.php?delPanier=<?= $infos->id_article; ?>" class="del">X</td>
+                    <td><a href="<?=$path_cart?>"?delPanier=<?= $infos->id_article; ?>" class="del">X</td>
                 </tr>
             </tbody>
     <?php
@@ -75,7 +84,7 @@ var_dump($_SESSION);
 
     <form action="../payement.php" method="POST">
         <input type="hidden" name="montant" value="<?= $panier->sub_total($infos->prix, $_SESSION['panier'][$infos->id_article]) ?>">
-        <input type="submit">
+        <input id="validerpanier" type="submit">
     </form>
     </main>
 </body>
