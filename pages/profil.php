@@ -6,9 +6,9 @@ require_once('../class/user.php');
 $path_index="../index.php"; 
 $path_inscription = "inscription.php"; 
 $path_connexion = "connexion.php";
-$path_profil ="profil.php"; 
+$path_profil =""; 
 $path_cart = "cart.php"; 
-$path_items ="";  
+$path_items = "items.php";  
 $path_categories="categories.php"; 
 $path_souscategories="souscategories.php";
 require_once('header.php'); 
@@ -18,70 +18,66 @@ var_dump($_SESSION['utilisateur']['id_utilisateurs']);
 ?>
 
 <main>
-<div class="wrapper">
-    <div class="border"></div>
-    <div class="main-element">
 
-<h1>Adresse</h1>
-    <form action="profil.php" method="POST">
-
-    <label for="country">Pays</label>
-    <input type="text" name="country">
-
-    <label for="city">Ville</label>
-    <input type="text" name="city">
-
-    <label for="postCode">Code postal</label>
-    <input type="text" name="postCode">
-
-    <label for="street">Rue</label>
-    <input type="text" name="street">
-
-    <label for="number">Numéro de rue</label>
-    <input type="number" name="number">
-
-
-    <h1>Infos client</h1>
-
-    <div class="row">
-        <div class="column">
-    <label for="name">Nom</label><br>
-    <input type="text" name="name">
-        </div>
-        <div class="column" >
-    <label for="surname">Prénom</label><br>
-    <input type="text" name="surname">
-        </div>
+<form action="profil.php" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="country">Pays</label>
+      <input type="text" class="form-control" id="input1">
     </div>
-
-    <div class="row">
-        <div class="column">
-    <label for="newLogin">Nouveau login</label><br>
-    <input type="text" name="name">
-        </div>
-        <div class="column" >
-    <label for="newMail">Nouveau mail</label><br>
-    <input type="text" name="surname">
-        </div>
+    <div class="form-group col-md-6">
+      <label for="city">Ville</label>
+      <input type="text" class="form-control" id="input2">
     </div>
-
-    <div class="row">
-        <div class="column">
-    <label for="name">Nouveau password</label><br>
-    <input type="text" name="name">
-        </div>
-        <div class="column" >
-    <label for="surname">Confirmation du mot de passe</label><br>
-    <input type="text" name="surname">
-        </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="postCode">Code Postal</label>
+      <input type="text" class="form-control" id="input3">
     </div>
-    <div>
-        <input type="submit" name="submit" value="Envoyer">
+    <div class="form-group col-md-6">
+      <label for="city">Rue</label>
+      <input type="text" class="form-control" id="input4">
     </div>
+    <div class="form-group col-md-6">
+      <label for="city">Numéro de Rue</label>
+      <input type="text" class="form-control" id="input5">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="nom">Nom</label>
+    <input type="text" class="form-control" id="input6" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="prenom">Prénom</label>
+    <input type="text" class="form-control" id="input7" placeholder="">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="newLogin">Nouveau Login</label>
+      <input type="text" class="form-control" id="input8">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="newLogin">Nouveau Mail</label>
+      <input type="text" class="form-control" id="input9">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="newLogin">Nouveau mot de passe </label>
+      <input type="password" class="form-control" id="input10">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="newLogin">Confirmez votre nouveau mot de passe </label>
+      <input type="password" class="form-control" id="input11">
+    </div>
+  </div>
 
-</div>
-</div>
-</div>
+  <button type="submit" name="submit" value="Envoyer" class="btn btn-primary">Mettre à jour mon profil</button>
+  <input type="submit" name="submit" value="Envoyer">
+
+</form>
+
 <?php
 if (isset($_POST['submit'])){
     $user = new User; 

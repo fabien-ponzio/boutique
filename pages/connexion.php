@@ -22,23 +22,20 @@ if (isset($_POST["connect"])) {
 ?>
 
 
-<main
->
-    <div class="wrapper">
-    <div class="border"></div>
-    <div class="main-element">
+<main>
 
     <form action="" method="POST">
-        <label for="login">login</label>
-        <input type="text" name="login">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Login</label>
+            <input type="text" class="form-control" id="InputLogin" name="login">
+        </div>
 
-        <label for="password" name="password">password</label>
-        <input type="password" name="password">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Password</label>
+            <input type="password" class="form-control" id="InputPassword" name="password">
+        </div>
 
         <input type="submit" name="connect" value="go!">
     </form>
 
-</div>
-</div>
-</div>
 </main>

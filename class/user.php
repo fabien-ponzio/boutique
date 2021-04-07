@@ -1,6 +1,10 @@
 <?php
+if ($page=="Accueil") {
+    require_once('./functions/db.php'); 
+}else{
+    require_once('../functions/db.php');
+}
 
-require_once('../functions/db.php'); 
 class User 
 {
     private $id_utilisateurs; 

@@ -1,9 +1,7 @@
 <?php
 //REQUIREEEE
-require_once('../class/categories.php'); 
-require_once('../class/panier.php'); 
-require_once('../functions/db.php'); 
-require_once('../class/user.php');
+require_once('../class/chemins_class.php'); 
+
 
 $db  = connect(); 
 $formatter =  new NumberFormatter('fr_FR', NumberFormatter::CURRENCY); 
@@ -26,20 +24,22 @@ if (isset($_POST['deconnexion'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- LINK STYLESHEET -->
     <link rel="stylesheet" href="../CSS/header.css">
-    <link rel="stylesheet" href="../CSS/items.css">
-    <link rel="stylesheet" href="../CSS/connexion.css">
+    <link rel="stylesheet" href="./CSS/items.css">
+    <link rel="stylesheet" href="./CSS/connexion.css">
     <link rel="stylesheet" href="../CSS/inscription.css">
-    <link rel="stylesheet" href="../CSS/profil.css">
-    <link rel="stylesheet" href="../CSS/cart.css">
-    <link rel="stylesheet" href="../CSS/items.css">
-    <link rel="stylesheet" href="../index.css">
-    <!-- LINK FONTAWESOME -->
+    <link rel="stylesheet" href="./CSS/profil.css">
+    <link rel="stylesheet" href="./CSS/cart.css">
+    <link rel="stylesheet" href="./CSS/items.css">
+    <link rel="stylesheet" href="./index.css">
+        <!-- LINK BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <!-- LINK FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    
 
 
-    <title>header</title>
+    <title>Double Bouclier -<?= $page?></title>
 </head>
 <body>
 <div class="conteneur">

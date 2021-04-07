@@ -9,7 +9,7 @@ $path_cart = "cart.php";
 $path_items ="";  
 $path_categories="categories.php"; 
 $path_souscategories="souscategories.php";
-require_once('header.php'); 
+
 class Categories 
 {
     public $db; 
