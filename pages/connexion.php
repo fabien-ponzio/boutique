@@ -1,4 +1,5 @@
 <?php 
+$page="connexion"; 
 // REQUIRE 
 $database = ('../functions/db.php');
 require_once('../functions/db.php');

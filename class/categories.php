@@ -1,5 +1,5 @@
 <?php
-require_once('../functions/db.php'); 
+require_once('functions/db.php'); 
 //PATH_PAGES
 $path_index="../index.php"; 
 $path_inscription = "inscription.php"; 

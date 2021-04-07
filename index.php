@@ -13,6 +13,7 @@ $page="Accueil";
 require_once('pages/header.php'); 
 //co db
 require_once('functions/db.php');
+//
 
 // //REQUIRE DES CLASS 
 // require_once('categories.php');

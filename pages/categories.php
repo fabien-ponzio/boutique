@@ -1,6 +1,7 @@
 <?php
+$page="categories"; 
 // require_once('../functions/db.php'); 
-require_once '../functions/db.php';
+require_once('../functions/db.php');
 // require_once('../class/categories.php'); 
 //PATH_PAGES
 $path_index="../index.php"; 

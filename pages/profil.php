@@ -1,7 +1,8 @@
 <?php 
+$page="profil"; 
 $database = ('../functions/db.php');
-require_once('../functions/db.php');
-require_once('../class/user.php');
+// require_once('../functions/db.php');
+// require_once('../class/user.php');
 //PATH_PAGES
 $path_index="../index.php"; 
 $path_inscription = "inscription.php"; 
