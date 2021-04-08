@@ -1,5 +1,4 @@
 <?php
-require_once('../class/categories.php'); 
 //PATH_PAGES
 $path_index="../index.php"; 
 $path_inscription = "inscription.php"; 
@@ -11,6 +10,7 @@ $path_categories="categories.php";
 $path_souscategories="";
 $page="Sous-Categorie";
 require_once('header.php'); 
+
 $categorie = new Categories(); 
 $id_sscategorie = $_GET['id']; 
 $nameSousCategorie = $categorie->getNameSousCategorie($id_sscategorie);

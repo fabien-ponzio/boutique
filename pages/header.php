@@ -1,6 +1,11 @@
 <?php
 //REQUIREEEE
-require('class/chemins_class.php'); 
+if($page=="Accueil"){
+    require_once('class/chemins_class.php');
+    }else{
+    require_once('../class/chemins_class.php'); 
+    }
+
 $db  = connect(); 
 $formatter =  new NumberFormatter('fr_FR', NumberFormatter::CURRENCY); 
 $panier = new Panier(); 
@@ -21,14 +26,31 @@ if (isset($_POST['deconnexion'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- LINK STYLESHEET -->
-    <link rel="stylesheet" href="./CSS/header.css">
-    <link rel="stylesheet" href="./CSS/items.css">
-    <link rel="stylesheet" href="./CSS/connexion.css">
-    <link rel="stylesheet" href="./CSS/inscription.css">
-    <link rel="stylesheet" href="./CSS/profil.css">
-    <link rel="stylesheet" href="./CSS/cart.css">
-    <link rel="stylesheet" href="./CSS/items.css">
-    <link rel="stylesheet" href="./CSS/index.css">
+<?php
+if ($page=="Accueil") {?>
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/items.css">
+    <link rel="stylesheet" href="CSS/connexion.css">
+    <link rel="stylesheet" href="CSS/inscription.css">
+    <link rel="stylesheet" href="CSS/profil.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+    <link rel="stylesheet" href="CSS/items.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <?php
+}else { ?>
+    
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/items.css">
+    <link rel="stylesheet" href="../CSS/connexion.css">
+    <link rel="stylesheet" href="../CSS/inscription.css">
+    <link rel="stylesheet" href="../CSS/profil.css">
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="../CSS/items.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+<?php
+}?>
+
+
         <!-- LINK BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <!-- LINK FONTAWESOME -->

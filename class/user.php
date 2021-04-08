@@ -1,9 +1,4 @@
 <?php
-if ($page=="Accueil") {
-    require_once('./functions/db.php'); 
-}else{
-    require_once('../functions/db.php');
-}
 
 class User 
 {
@@ -61,19 +56,19 @@ class User
                         header('location:connexion.php'); 
                     }
                 else {
-                    $error_log = "les mots de passes correspondent pas t'es sah ? "; 
+                    $error_log = "Les mots de passes ne correspondent pas"; 
                 }
                 }
             else {
-                $error_log = "ton blaz est déjà pris"; 
+                $error_log = "Le login est déjà utilisée par quelqu'un d'autre"; 
             }
         }
         else {
-            $error_log = "insère 5 caractères minimum, zin.";
+            $error_log = "Veuillez insérer au minimum 5 caractères dans les champs";
         }
     }
     else {
-        $error_log= "remplis les champs, oh truffe!"; 
+        $error_log= "Veuillez remplir les champs"; 
     }
 echo $error_log;
 }

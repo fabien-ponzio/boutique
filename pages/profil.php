@@ -1,6 +1,5 @@
 <?php 
 $page="profil"; 
-$database = ('../functions/db.php');
 // require_once('../functions/db.php');
 // require_once('../class/user.php');
 //PATH_PAGES
@@ -24,53 +23,53 @@ var_dump($_SESSION['utilisateur']['id_utilisateurs']);
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="country">Pays</label>
-      <input type="text" class="form-control" id="input1">
+      <input type="text" class="form-control" id="input1" name="country">
     </div>
     <div class="form-group col-md-6">
       <label for="city">Ville</label>
-      <input type="text" class="form-control" id="input2">
+      <input type="text" class="form-control" id="input2" name="city">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="postCode">Code Postal</label>
-      <input type="text" class="form-control" id="input3">
+      <input type="text" class="form-control" id="input3" name="postCode">
     </div>
     <div class="form-group col-md-6">
       <label for="city">Rue</label>
-      <input type="text" class="form-control" id="input4">
+      <input type="text" class="form-control" id="input4" name="street">
     </div>
     <div class="form-group col-md-6">
       <label for="city">Numéro de Rue</label>
-      <input type="text" class="form-control" id="input5">
+      <input type="text" class="form-control" id="input5" name="number">
     </div>
   </div>
   <div class="form-group">
     <label for="nom">Nom</label>
-    <input type="text" class="form-control" id="input6" placeholder="">
+    <input type="text" class="form-control" id="input6" placeholder="" name="name">
   </div>
   <div class="form-group">
     <label for="prenom">Prénom</label>
-    <input type="text" class="form-control" id="input7" placeholder="">
+    <input type="text" class="form-control" id="input7" placeholder="" name="surname">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="newLogin">Nouveau Login</label>
-      <input type="text" class="form-control" id="input8">
+      <input type="text" class="form-control" id="input8" name="newLogin">
     </div>
     <div class="form-group col-md-6">
       <label for="newLogin">Nouveau Mail</label>
-      <input type="text" class="form-control" id="input9">
+      <input type="text" class="form-control" id="input9" name="newMail">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="newLogin">Nouveau mot de passe </label>
-      <input type="password" class="form-control" id="input10">
+      <input type="password" class="form-control" id="input10" name="newPassword">
     </div>
     <div class="form-group col-md-6">
       <label for="newLogin">Confirmez votre nouveau mot de passe </label>
-      <input type="password" class="form-control" id="input11">
+      <input type="password" class="form-control" id="input11" name="confPassword">
     </div>
   </div>
 

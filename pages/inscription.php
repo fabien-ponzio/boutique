@@ -1,17 +1,6 @@
 <?php
 //REQUIRE
 $page="inscription";
-require_once('header.php'); 
-$database = ('../functions/db.php');
-require_once('../functions/db.php');
-require_once('../class/user.php');
-
-if (isset($_POST['register'])) {
-        $user = new User(); 
-        $user->register($_POST['login'],$_POST['email'],$_POST['password'],$_POST['confirmPW']); 
-        $_SESSION['user']=$user; 
-        var_dump($user); 
-    }
 
 // PATH PAGES 
 $path_index="../index.php"; 
@@ -22,6 +11,14 @@ $path_cart = "cart.php";
 $path_items ="items.php";  
 $path_categories="categories.php"; 
 $path_souscategories="souscategories.php"; 
+require_once('header.php'); 
+
+if (isset($_POST['register'])) {
+    $user = new User(); 
+    $user->register($_POST['login'],$_POST['email'],$_POST['password'],$_POST['confirmPW']); 
+    $_SESSION['user']=$user; 
+    var_dump($user); 
+}
 
 
 ?>
