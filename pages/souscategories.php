@@ -29,19 +29,25 @@ $Items = $categorie->getItems($id_sscategorie);
     <title>Document</title>
 </head>
 <body>
-<h1>SOUS-CATEGORIE <?=$nameSousCategorie['nom']?></h1>
-<?php 
-foreach($Items as $article){?>
-<div class="displayItems">
-<a href="items.php?id=<?=$article['id_article']?>"><?= $article['nom']?></a>
-<span><?= $article['taille']?></span>
-<span><?= $article['prix']?></span>
-<?php $Pictures = $categorie->getPictures($article['id_article']); //var_dump($Pictures); ?>
-    <a href="items.php?id=<?=$article['id_article']?>"><img src="../<?= $Pictures['chemin_image']?>" alt="#"></a>
-</div>
-<?php
+<main class="wrapper_categories">
+    <h1>SOUS-CATEGORIE <?=$nameSousCategorie['nom']?></h1>
 
+    <section class="wrapper_item">
+    <?php 
+    foreach($Items as $article){?>
+    <article class="displayItems">
+
+    <?php $Pictures = $categorie->getPictures($article['id_article']); //var_dump($Pictures); ?>
+    <a href="items.php?id=<?=$article['id_article']?>"><img src="../<?= $Pictures['chemin_image']?>" alt="#"></a>
+    <a href="items.php?id=<?=$article['id_article']?>"><?= $article['nom']?></a>
+    <p><?= $article['taille']?></p>
+    <p><?= $article['prix']?> €</p>
+
+    </article>
+    <?php
 }
 ?>
+    </section>
+</main>
 </body>
 </html>

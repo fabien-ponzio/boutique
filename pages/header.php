@@ -36,9 +36,10 @@ if ($page=="Accueil") {?>
     <link rel="stylesheet" href="CSS/cart.css">
     <link rel="stylesheet" href="CSS/items.css">
     <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/souscategories.css">
+
     <?php
-}else { ?>
-    
+}else { ?> 
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/items.css">
     <link rel="stylesheet" href="../CSS/connexion.css">
@@ -47,12 +48,14 @@ if ($page=="Accueil") {?>
     <link rel="stylesheet" href="../CSS/cart.css">
     <link rel="stylesheet" href="../CSS/items.css">
     <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/souscategories.css">
+
 <?php
 }?>
 
 
         <!-- LINK BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
         <!-- LINK FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -70,6 +73,7 @@ if ($page=="Accueil") {?>
             <ul>
                 <li><a href=<?=$path_cart?> >Panier <?= $panier->count()?></a></li>
                 <li><a href=<?=$path_profil?> >Profil</a></li>
+
                 <!-- DROPDOWN CATEGORIES -->
                 
                 <?php 
@@ -84,7 +88,6 @@ if ($page=="Accueil") {?>
                 </button>
                 <div class="dropdown-content">
                     <?php $sousCategory = $categorie->getSouscategories($id_category);
-                    // var_dump($sousCategory);
                     foreach($sousCategory as $sousCat){?>
                     <a href="<?=$path_souscategories?>?id=<?= $sousCat["id_sscategorie"] ?>"><?= $sousCat['nom'] ?></a>
                         <?php 
@@ -105,15 +108,20 @@ if ($page=="Accueil") {?>
             <?php } ?>
             <li><a href="#">Contact</a></li>
             <li><a href="<?=$path_index?>">Index</a></li>
-                </div>
+            <li class="bouton_deco">
+                <a href="">
+                    <form action="connexion.php" method="POST">
+                        <input type="submit" name="deconnexion">
+                    </form>
+                </a>
+            </li>
+
+            </div>
         </ul>
 
     <div class="social_media">
         <ul>
             <li>
-            <form action="connexion.php" method="POST">
-                <input type="submit" name="deconnexion">
-            </form>
             </li>
             <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>

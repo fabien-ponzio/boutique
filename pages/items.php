@@ -10,8 +10,8 @@ $path_categories="categories.php";
 $path_souscategories="souscategories.php";
 $page='Article';
 require_once('header.php'); 
-// $items = new Categories(); 
-// $id_items = $_GET['id']; 
+$items = new Categories(); 
+$id_items = $_GET['id']; 
 // résultat
 $getItemsinfo = $items->getItemsinfo($id_items);
 ?>

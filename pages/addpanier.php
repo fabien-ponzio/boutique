@@ -10,9 +10,9 @@ $path_categories="categories.php";
 $path_souscategories="souscategories.php";
 $page="Ajout Panier";
 require_once('header.php');
-// if(isset($_GET)){
-// $id_article = $_GET['id']; 
-// }
+if(isset($_GET)){
+$id_article = $_GET['id']; 
+}
 if (isset($id_article)) {
     // j'appelle la methode get product qui fait parti de la classe panier et qui peut me permettre de récupérer les informations d'un produit en paramètres je lui passe l'id article 
     $product = $panier->getProducts($id_article); 

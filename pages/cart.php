@@ -10,13 +10,15 @@ $path_categories="categories.php";
 $path_souscategories="souscategories.php";
 $page="Panier";
 require_once('header.php'); 
-var_dump($_SESSION);
+$basket = new Panier(); 
+// $id_panier = $_GET['id']; 
+
     var_dump($_SESSION['panier']); 
     // array keys(fonction php qui permet de récuper les index du tableau session) nous permet de récuperer les index de le session panier 
 
     $ids = array_keys($_SESSION['panier']);
     if (empty($ids)) {
-        //il ny'a rien dans le panier donc le tableau est vide
+        //il n y'a rien dans le panier donc le tableau est vide
         $products=array(); 
     }else {
         $products = $db->prepare('SELECT * FROM articles AS A INNER JOIN image_article AS I ON A.id_article = I.id_article WHERE A.id_article IN ('.implode(',',$ids).')');
@@ -25,6 +27,7 @@ var_dump($_SESSION);
         $selectInfos = $products->fetchAll(PDO::FETCH_OBJ); 
         // var_dump($selectInfos); 
     }
+    var_dump($_SESSION['panier']);
 
 ?>
 
@@ -90,4 +93,3 @@ var_dump($_SESSION);
     </main>
 </body>
 
-<?php require_once('footer.php'); ?>

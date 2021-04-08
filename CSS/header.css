@@ -165,3 +165,6 @@ body{
       display: none !important;
     }
 
+.bouton_deco{
+  background-color: burlywood;
+}
