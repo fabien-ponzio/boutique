@@ -15,6 +15,7 @@ $id_items = $_GET['id'];
 // résultat
 $getItemsinfo = $items->getItemsinfo($id_items);
 ?>
+<link rel="stylesheet" href="CSS/items.css">
 <main>
 <div class="displayItems">
 <?php

@@ -1,20 +1,19 @@
 .wrapper_categories{
     display:flex; 
     flex-direction: column;
-    background-color: cornflowerblue;
     align-items: center;
     justify-content: center;
 }
 
 .wrapper_categories h1{
-    background-color: crimson;
+    margin-left: 15%;
+    margin-bottom: 20px;
 }
 
 .wrapper_item{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: darkcyan;
     width: 70%;
     margin-left: 20%;
     align-items: center;
@@ -28,14 +27,31 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: darkgoldenrod;
     width: 20%;
     margin-left:2.5% ;
     margin-right:2.5% ;
+    margin-bottom: 50px;
+    position: relative;
+    background: white;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    color: white;
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .4s ease;
+      
 }
+.displayItems:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+  }
 
 .displayItems img{
     width: 150px;
     height: 220px; 
-    box-shadow: 6px 6px 10px black;
+    /* box-shadow: 6px 6px 10px black; */
+}
+
+.displayItems a{
+    text-align: center;
+    align-items: center;
+    
 }

@@ -9,9 +9,7 @@ $path_cart = "cart.php";
 $path_items ="items.php";  
 $path_categories="categories.php"; 
 $path_souscategories="souscategories.php"; 
-
 require_once('header.php'); 
-
 
 if (isset($_POST["connect"])) {
     $user = new User(); 
@@ -19,6 +17,7 @@ if (isset($_POST["connect"])) {
 }
 ?>
 
+<link rel="stylesheet" href="CSS/connexion.css">
 
 <main>
 

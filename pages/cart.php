@@ -13,7 +13,6 @@ require_once('header.php');
 $basket = new Panier(); 
 // $id_panier = $_GET['id']; 
 
-    var_dump($_SESSION['panier']); 
     // array keys(fonction php qui permet de récuper les index du tableau session) nous permet de récuperer les index de le session panier 
 
     $ids = array_keys($_SESSION['panier']);
@@ -22,15 +21,11 @@ $basket = new Panier();
         $products=array(); 
     }else {
         $products = $db->prepare('SELECT * FROM articles AS A INNER JOIN image_article AS I ON A.id_article = I.id_article WHERE A.id_article IN ('.implode(',',$ids).')');
-        // var_dump($products);  
         $products -> execute(); 
         $selectInfos = $products->fetchAll(PDO::FETCH_OBJ); 
-        // var_dump($selectInfos); 
     }
-    var_dump($_SESSION['panier']);
-
 ?>
-
+<link rel="stylesheet" href="CSS/cart.css">
 <body>
     <main id="register_content">
         <section id="panier">
@@ -50,9 +45,7 @@ $basket = new Panier();
     <?php
     if(empty($ids)){
         $selectInfos = array();
-    } else{
-
-   
+    }else{
         foreach ($selectInfos as $infos) {?>
             <tbody>
                 <tr>
@@ -72,13 +65,13 @@ $basket = new Panier();
                         $sub_total = $panier->sub_total($infos->prix, $_SESSION['panier'][$infos->id_article]);?>
                         <?= $sub_total ?>
                     </td>
-                    <td><a href="<?=$path_cart?>"?delPanier=<?= $infos->id_article; ?>" class="del">X</td>
+                    <td><a href="<?=$path_cart?>?delPanier=<?= $infos->id_article; ?>" class="del">X</td>
                 </tr>
             </tbody>
     <?php
         }
     ?>
-        <span>Prix total = <?= $panier ->total() ?> Euros</span>
+        <span id="prixtotal">Prix total = <?= $panier ->total() ?> Euros</span>
     <?php
     }
     ?>

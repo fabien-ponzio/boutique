@@ -29,31 +29,11 @@ if (isset($_POST['deconnexion'])) {
 <?php
 if ($page=="Accueil") {?>
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/items.css">
-    <link rel="stylesheet" href="CSS/connexion.css">
-    <link rel="stylesheet" href="CSS/inscription.css">
-    <link rel="stylesheet" href="CSS/profil.css">
-    <link rel="stylesheet" href="CSS/cart.css">
-    <link rel="stylesheet" href="CSS/items.css">
-    <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/souscategories.css">
-
     <?php
-}else { ?> 
+}else{?> 
     <link rel="stylesheet" href="../CSS/header.css">
-    <link rel="stylesheet" href="../CSS/items.css">
-    <link rel="stylesheet" href="../CSS/connexion.css">
-    <link rel="stylesheet" href="../CSS/inscription.css">
-    <link rel="stylesheet" href="../CSS/profil.css">
-    <link rel="stylesheet" href="../CSS/cart.css">
-    <link rel="stylesheet" href="../CSS/items.css">
-    <link rel="stylesheet" href="../CSS/index.css">
-    <link rel="stylesheet" href="../CSS/souscategories.css">
-
 <?php
 }?>
-
-
         <!-- LINK BOOTSTRAP -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
         <!-- LINK FONTAWESOME -->
@@ -69,7 +49,8 @@ if ($page=="Accueil") {?>
     <div class="sidebar">
 
         <h2>Double Bouclier</h2>
-        <?php if (isset($_SESSION['utilisateur'])){?>
+        <?php if (isset($_SESSION['utilisateur'])){
+            ?>
             <ul>
                 <li><a href=<?=$path_cart?> >Panier <?= $panier->count()?></a></li>
                 <li><a href=<?=$path_profil?> >Profil</a></li>
@@ -96,18 +77,16 @@ if ($page=="Accueil") {?>
                     </div>
                 </div>
                  <?php }?>
-                
-            <?php } else {
-                if (isset($_SESSION[''])) {
-                    # code...
-                }
+            <?php }else{
                 ?>
-            
             <li><a href="<?=$path_inscription?>">Inscription</a></li>
             <li><a href="<?=$path_connexion?>">Connexion</a></li>
             <?php } ?>
             <li><a href="#">Contact</a></li>
             <li><a href="<?=$path_index?>">Index</a></li>
+            <?php if(isset($_SESSION['utilisateur'])){ ?>
+            
+            <span>Hello @<?= $_SESSION['utilisateur']['login']?></span>
             <li class="bouton_deco">
                 <a href="">
                     <form action="connexion.php" method="POST">
@@ -115,6 +94,8 @@ if ($page=="Accueil") {?>
                     </form>
                 </a>
             </li>
+
+            <?php } ?>
 
             </div>
         </ul>

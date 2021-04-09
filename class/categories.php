@@ -35,6 +35,13 @@ public function getItems ($id_sscategorie){
     return $fetch; 
 }
 
+// Récupère toutes les article en fonction de l'ID de la catégorie
+public function getItemsbycat ($id_categorie){
+    $getItems = $this->db->prepare("SELECT * FROM articles WHERE id_categorie = $id_categorie"); 
+    $getItems->execute();
+    $fetch = $getItems->fetchAll(); 
+    return $fetch; 
+}
 // Récupère toutes les sous-catégories en fonction de l'ID catégorie 
 
 public function getSouscategories ($idCategorie){
@@ -42,6 +49,15 @@ public function getSouscategories ($idCategorie){
     $GetSousCategories->execute();
     $SousCategories = $GetSousCategories->fetchAll(PDO::FETCH_ASSOC); 
     return $SousCategories; 
+}
+
+// Récupère les noms des catégories
+
+public function getNameCategorie ($idCategorie){
+    $GetNameCategories = $this->db->prepare("SELECT * FROM categorie WHERE id_categorie =$idCategorie"); 
+    $GetNameCategories->execute();
+    $NameCategories = $GetNameCategories->fetch(); 
+    return $NameCategories; 
 }
 
 // Récupère les noms des sous-catégories

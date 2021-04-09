@@ -11,9 +11,16 @@ $path_categories="pages/categories.php";
 $path_souscategories="pages/souscategories.php";
 $page="Accueil";
 require_once('pages/header.php'); 
-//co db
-
 ?>
+<!-- <link rel="stylesheet" href="../CSS/header.css"> -->
+<link rel="stylesheet" href="../CSS/items.css">
+<link rel="stylesheet" href="../CSS/connexion.css">
+<link rel="stylesheet" href="../CSS/inscription.css">
+<link rel="stylesheet" href="../CSS/profil.css">
+<link rel="stylesheet" href="../CSS/cart.css">
+<link rel="stylesheet" href="../CSS/items.css">
+<link rel="stylesheet" href="../CSS/index.css">
+<link rel="stylesheet" href="../CSS/souscategories.css">
 
 
 <body>

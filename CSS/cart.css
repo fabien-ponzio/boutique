@@ -10,7 +10,6 @@
 
 #panier form table {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  background-color: white;
 }
 
 #panier form thead th {
@@ -32,11 +31,6 @@
   color: black;
 }
 
-#panier form a:hover {
-  color: #00ff00;
-  transition: 1.5s;
-}
-
 #panier form th,
 td {
   font-weight: 400;
@@ -44,10 +38,11 @@ td {
   text-align: center;
   width: 20%;
   text-transform: uppercase;
+  padding : 5px; 
 }
 
 #panier img {
-  box-shadow: 0 0 15px #00ff00;
+  box-shadow: 0 0 15px black;
 }
 
 #panier form tr {
@@ -59,11 +54,14 @@ td {
 #panier form td {
   border-bottom: 1px solid #fff;
   padding-bottom: 5%;
+  padding-top: 5%;
   background-color: #fff;
 }
-#panier{
-  margin-left: 30%;
-}
+
  #validerpanier{
   margin-left: 30%;
+ }
+
+ #prixtotal{
+   padding-top: 20%;
  }

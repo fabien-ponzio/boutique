@@ -19,22 +19,30 @@ require_once('header.php');
 
 $categorie = new Categories(); 
 $allCategories = $categorie->AllCategories(); 
-// var_dump($allCategories); 
+$getItems = $categorie->getItemsbycat($_GET['id']); 
+//var_dump($getItems); 
+$nameCategorie = $categorie->getNameCategorie($_GET['id']);
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<link rel="stylesheet" href="../CSS/souscategories.css">
 <body>
-<?php
- foreach ($allCategories as $cat) {?>
- <a href="souscategories.php?id=<?= $cat['id_sscategorie'] ?>"><?=$cat['nom']?></a>
- <?php
-}; ?>
+<main class="wrapper_categories">
+    <h1>Catégorie <?=$nameCategorie['nom_categorie']?></h1>
+    <?php var_dump($nameCategorie);?>
+
+    <section class="wrapper_item">
+    <?php 
+    foreach($getItems as $article){?>
+    <article class="displayItems">
+
+    <?php $Pictures = $categorie->getPictures($article['id_article']); //var_dump($Pictures); ?>
+    <a href="items.php?id=<?=$article['id_article']?>"><img src="../<?= $Pictures['chemin_image']?>" alt="#"></a>
+    <a href="items.php?id=<?=$article['id_article']?>"><?= $article['nom']?></a>
+    <p><?= $article['taille']?></p>
+    <p><?= $article['prix']?> €</p>
+
+    </article>
+    <?php
+}
+?>
 </body>
 </html>

@@ -19,29 +19,28 @@ if (isset($_POST['register'])) {
     $_SESSION['user']=$user; 
     var_dump($user); 
 }
-
-
 ?>
+<link rel="stylesheet" href="CSS/inscription.css">
 
     <main class="page">
 
     <form method="POST">
-        <div class="form-group">
+        <div>
             <label for="exampleInputEmail1">Login</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="login">
         </div>
 
-        <div class="form-group">
+        <div>
             <label for="exampleInputEmail1">Adresse E-Mail</label>
             <input type="email" class="form-control" id="exampleInputEmail1" name="email">
         </div>
 
-        <div class="form-group">
+        <div>
             <label for="exampleInputPassword1">Mot de passe</label>
             <input type="password" class="form-control" id="InputPassword1" name="password">
         </div>
 
-        <div class="form-group">
+        <div>
             <label for="exampleInputPassword1">Confirmez votre mot de passe </label>
             <input type="password" class="form-control" id="InputPassword2" name="confirmPW">
         </div>
