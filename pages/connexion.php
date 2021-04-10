@@ -17,22 +17,22 @@ if (isset($_POST["connect"])) {
 }
 ?>
 
-<link rel="stylesheet" href="CSS/connexion.css">
+<link rel="stylesheet" href="../CSS/connexion.css">
 
 <main>
 
-    <form action="" method="POST">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Login</label>
-            <input type="text" class="form-control" id="InputLogin" name="login">
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputEmail1">Password</label>
-            <input type="password" class="form-control" id="InputPassword" name="password">
-        </div>
-
-        <input type="submit" name="connect" value="go!">
-    </form>
-
+<div class="connect-box">
+  <form method="POST">
+  <h1>Connexion</h1>
+    <div class="user-box">
+      <input type="text" name="login" required="">
+      <label>Login</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required="">
+      <label>Mot de passe</label>
+    </div>
+    <input class="connect" type="submit" name="connect">
+  </form>
+</div>
 </main>

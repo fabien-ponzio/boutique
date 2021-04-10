@@ -20,33 +20,31 @@ if (isset($_POST['register'])) {
     var_dump($user); 
 }
 ?>
-<link rel="stylesheet" href="CSS/inscription.css">
+<link rel="stylesheet" href="../CSS/inscription.css">
 
-    <main class="page">
-
-    <form method="POST">
-        <div>
-            <label for="exampleInputEmail1">Login</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="login">
-        </div>
-
-        <div>
-            <label for="exampleInputEmail1">Adresse E-Mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" name="email">
-        </div>
-
-        <div>
-            <label for="exampleInputPassword1">Mot de passe</label>
-            <input type="password" class="form-control" id="InputPassword1" name="password">
-        </div>
-
-        <div>
-            <label for="exampleInputPassword1">Confirmez votre mot de passe </label>
-            <input type="password" class="form-control" id="InputPassword2" name="confirmPW">
-        </div>
-
-        <button type="submit" name="register" class="btn btn-primary">Go</button>
-        </form>
-    </main>
-</body>
-</html>
+<main>
+<div class="login-box">
+  <form method="POST">
+  <h1>inscription</h1>
+    <div class="user-box">
+      <input type="text" name="login" required="">
+      <label>Login</label>
+    </div>
+    <div class="user-box">
+      <input type="email" name="email" required="">
+      <label>E-Mail</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required="">
+      <label>Mot de passe</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="confirmPW" required="">
+      <label>Confirmez votre mot de passe</label>
+    </div>
+    <input class="register" type="submit" name="register">
+    <a href="#">
+    </a>
+    </form>
+</div>    
+</main>

@@ -29,7 +29,7 @@ $Items = $categorie->getItems($id_sscategorie);
     <title>Document</title>
 </head>
 <body>
-<link rel="stylesheet" href="CSS/souscategories.css">
+<link rel="stylesheet" href="../CSS/souscategories.css">
 <main class="wrapper_categories">
     <h1>Sous-catégorie <?=$nameSousCategorie['nom']?></h1>
     <section class="wrapper_item">
