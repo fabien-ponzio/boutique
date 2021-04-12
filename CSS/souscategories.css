@@ -10,7 +10,7 @@
     margin-bottom: 20px;
 }
 
-.wrapper_item{
+.item{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

@@ -1,6 +1,14 @@
+main h1{
+  text-align: center;
+  align-items: center;
+  margin-left: 150px;
+  margin-bottom: 10px;
+}
 #panier form {
   display: flex;
   width: 70%;
+  margin-left: 20%;
+  margin-bottom: 5%;
 }
 
 #panier form input[type="text"] {

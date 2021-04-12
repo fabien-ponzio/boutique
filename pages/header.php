@@ -1,4 +1,5 @@
 <?php
+ob_start(); 
 //REQUIREEEE
 if($page=="Accueil"){
     require_once('class/chemins_class.php');
@@ -16,6 +17,11 @@ $nameCategories = $categorie->getCategories();
 if (isset($_POST['deconnexion'])) {
     $user = new User(); 
     $user->Disconnect(); 
+    if ($page==="Accueil") {
+    header('location:index.php'); 
+    }else{
+    header('location:connexion.php'); 
+    }
 }
 //var_dump($nameCategories); 
 ?> 
@@ -53,7 +59,7 @@ if ($page=="Accueil") {?>
             ?>
             <ul>
                 <li><a href=<?=$path_cart?> >Panier <?= $panier->count()?></a></li>
-                <li><a href=<?=$path_profil?> >Profil</a></li>
+                <li><a href=<?=$path_info?> >Profil</a></li>
 
                 <!-- DROPDOWN CATEGORIES -->
                 
@@ -61,7 +67,7 @@ if ($page=="Accueil") {?>
                 foreach ($nameCategories as $nameCategorie) {
                     $id_category = $nameCategorie['id_categorie'];
                 ?>
-               <div class="dropdown"> 
+                <div class="dropdown"> 
                 <button class="dropbtn">
                 <a href="<?=$path_categories?>?id=<?= $id_category ?>">
                 <?= $nameCategorie ["nom_categorie"]?>
@@ -79,35 +85,28 @@ if ($page=="Accueil") {?>
                  <?php }?>
             <?php }else{
                 ?>
-            <li><a href="<?=$path_inscription?>">Inscription</a></li>
-            <li><a href="<?=$path_connexion?>">Connexion</a></li>
-            <?php } ?>
-            <li><a href="#">Contact</a></li>
-            <li><a href="<?=$path_index?>">Index</a></li>
+                        <ul>
+                <li><a href="<?=$path_inscription?>">Inscription</a></li>
+                <li><a href="<?=$path_connexion?>">Connexion</a></li>
+                <?php } ?>
+                <li><a href="<?=$path_index?>">Index</a></li>
+                </ul>
             <?php if(isset($_SESSION['utilisateur'])){ ?>
-            
-            <span>Hello @<?= $_SESSION['utilisateur']['login']?></span>
+            var_dump
+            <span class="hello">Hello @<?= $_SESSION['utilisateur']['login']?></span>
             <li class="bouton_deco">
                 <a href="">
                     <form action="connexion.php" method="POST">
-                        <input type="submit" name="deconnexion">
+                        <input type="submit" name="deconnexion" value="deconnexion">
                     </form>
                 </a>
             </li>
-
             <?php } ?>
-
             </div>
         </ul>
 
-    <div class="social_media">
-        <ul>
-            <li>
-            </li>
-            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-        </ul>
-    </div>
     </div>
 </div> 
+<?php ob_end_flush();?>
+<footer>
+</footer>

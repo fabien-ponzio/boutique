@@ -4,6 +4,7 @@ $page="connexion";
 $path_index="../index.php"; 
 $path_inscription = "inscription.php"; 
 $path_connexion = "connexion.php";
+$path_info ="infoUser.php"; 
 $path_profil ="profil.php"; 
 $path_cart = "cart.php"; 
 $path_items ="items.php";  
@@ -33,6 +34,7 @@ if (isset($_POST["connect"])) {
       <label>Mot de passe</label>
     </div>
     <input class="connect" type="submit" name="connect">
+
   </form>
 </div>
 </main>

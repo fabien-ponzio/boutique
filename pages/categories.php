@@ -7,6 +7,7 @@ require_once('../functions/db.php');
 $path_index="../index.php"; 
 $path_inscription = "inscription.php"; 
 $path_connexion = "connexion.php";
+$path_info ="infoUser.php"; 
 $path_profil ="profil.php"; 
 $path_cart = "cart.php"; 
 $path_items ="items.php";  
@@ -23,7 +24,7 @@ $getItems = $categorie->getItemsbycat($_GET['id']);
 //var_dump($getItems); 
 $nameCategorie = $categorie->getNameCategorie($_GET['id']);
 ?>
-<link rel="stylesheet" href="../CSS/souscategories.css">
+<link rel="stylesheet" href="../CSS/categories.css">
 <body>
 <main class="wrapper_categories">
     <h1>Catégorie <?=$nameCategorie['nom_categorie']?></h1>

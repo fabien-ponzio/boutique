@@ -3,6 +3,7 @@
 $path_index ="../index.php"; 
 $path_inscription = "inscription.php"; 
 $path_connexion = "connexion.php";
+$path_info ="infoUser.php"; 
 $path_profil ="profil.php"; 
 $path_cart = ""; 
 $path_items ="items.php";  
@@ -25,9 +26,10 @@ $basket = new Panier();
         $selectInfos = $products->fetchAll(PDO::FETCH_OBJ); 
     }
 ?>
-<link rel="stylesheet" href="CSS/cart.css">
+<link rel="stylesheet" href="../CSS/cart.css">
 <body>
-    <main id="register_content">
+    <main>
+        <h1>Votre panier</h1>
         <section id="panier">
             <form action="cart.php" method="POST">
                 <table>
@@ -57,7 +59,7 @@ $basket = new Panier();
                     <td><?= $_SESSION['panier'][$infos->id_article] ?></td>
                     <td><input type="text" name="panier[quantity][<?= $infos->id_article;?>]" value="<?= $_SESSION['panier'][$infos->id_article];?>"></td>
                     <td>
-                    <input id="recalc" name="recalc" type="submit" value="Recalculer"> > 
+                    <input id="recalc" name="recalc" type="submit" value="Recalculer"> 
                     </td>
                     <td>
                         <?php 
@@ -71,7 +73,7 @@ $basket = new Panier();
     <?php
         }
     ?>
-        <span id="prixtotal">Prix total = <?= $panier ->total() ?> Euros</span>
+        <span id="prixtotal">Prix total = <?= $panier ->total() ?>€</span>
     <?php
     }
     ?>
@@ -81,7 +83,7 @@ $basket = new Panier();
 
     <form action="../payement.php" method="POST">
         <input type="hidden" name="montant" value="<?= $panier->sub_total($infos->prix, $_SESSION['panier'][$infos->id_article]) ?>">
-        <input id="validerpanier" type="submit">
+        <input id="validerpanier" type="submit" value="Payer">
     </form>
     </main>
 </body>

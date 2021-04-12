@@ -4,6 +4,7 @@ $page="profil";
 $path_index="../index.php"; 
 $path_inscription = "inscription.php"; 
 $path_connexion = "connexion.php";
+$path_info ="infoUser.php"; 
 $path_profil =""; 
 $path_cart = "cart.php"; 
 $path_items = "items.php";  

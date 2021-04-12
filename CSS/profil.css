@@ -12,7 +12,7 @@
 .update-box {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 35%;
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);

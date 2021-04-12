@@ -1,11 +1,11 @@
-.wrapper_produitsphares{
+.wrapper_categories{
     display:flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.wrapper_produitsphares h1{
+.wrapper_categories h1{
     margin-left: 15%;
     margin-bottom: 20px;
 }

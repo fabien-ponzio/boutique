@@ -85,4 +85,11 @@ public function getItemsinfo($id_article){
     $fetch = $getItemsinfo->fetchAll(PDO::FETCH_ASSOC); 
     return $fetch; 
 }
+
+public function produitsPhare(){
+    $GetproduitsPhare = $this->db->prepare("SELECT * FROM articles INNER JOIN image_article ON articles.id_article=image_article.id_article ORDER BY articles.id_article DESC LIMIT 8 "); 
+    $GetproduitsPhare->execute(); 
+    $fetch = $GetproduitsPhare->fetchAll(PDO::FETCH_ASSOC); 
+    return $fetch; 
+}
 }

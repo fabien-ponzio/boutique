@@ -1,8 +1,57 @@
-body {
-}
-/* .displayItems {
-  display: flex;
+.wrapper_items{
+  display:flex; 
   flex-direction: column;
-  margin-left: 50%;
-} */
+  align-items: center;
+  justify-content: center;
+}
 
+.wrapper_categories h1{
+  margin-left: 15%;
+  margin-bottom: 20px;
+}
+
+.wrapper_item{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 70%;
+  margin-left: 20%;
+  align-items: center;
+  justify-content: center;
+}
+
+.item{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  width: 20%;
+  margin-left:2.5% ;
+  margin-right:2.5% ;
+  margin-bottom: 50px;
+  position: relative;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  color:black;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+    
+}
+.item:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+.item img{
+  width: 150px;
+  height: 220px; 
+  /* box-shadow: 6px 6px 10px black; */
+}
+
+.item a{
+  text-align: center;
+  align-items: center;
+  
+}

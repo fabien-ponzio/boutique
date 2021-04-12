@@ -96,7 +96,7 @@ echo $error_log;
             'password' => 
                 $this->password               
             ]; 
-            header('location:profil.php');
+            header('location:infoUser.php');
         } else {
                 $error_log = "Login ou mot de passe erronné" ; 
             }
@@ -178,11 +178,17 @@ echo $error_log;
 
     echo $error_log; 
     }
+    public function InfoUser($id_user){
+            $getinfo = $this->db->prepare("SELECT * FROM utilisateurs WHERE id_utilisateurs = $id_user"); 
+            $getinfo->execute(); 
+            $fetch = $getinfo->fetchAll(PDO::FETCH_ASSOC); 
+            return $fetch; 
+        
+    }
 // ------------------------------------------------------- DECONNEXION ----------------------------------------- // 
     public function Disconnect(){
         session_unset(); 
         session_destroy(); 
-        header('location:connexion.php'); 
     }
 
 }
