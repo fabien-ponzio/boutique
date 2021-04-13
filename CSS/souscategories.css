@@ -8,6 +8,8 @@
 .wrapper_categories h1{
     margin-left: 15%;
     margin-bottom: 20px;
+    font-family: 'Zilla Slab Highlight', cursive;
+    color:#717171
 }
 
 .item{
@@ -37,6 +39,7 @@
     color: white;
     box-shadow: 20px 20px rgba(0,0,0,.15);
     transition: all .4s ease;
+    font-family: 'Arvo', serif;
       
 }
 .displayItems:hover {

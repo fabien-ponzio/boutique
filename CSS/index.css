@@ -37,6 +37,7 @@
     color: white;
     box-shadow: 20px 20px rgba(0,0,0,.15);
     transition: all .4s ease;
+    font-family: 'Arvo', serif;
       
 }
 .displayItems:hover {
@@ -53,5 +54,24 @@
 .displayItems a{
     text-align: center;
     align-items: center;
-    
 }
+
+.intro{
+    margin-left: 210px; 
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Arvo', serif;
+}
+
+.wrapper_produitsphares h2{
+    margin-left: 170px;
+    margin-bottom: 30px;
+    font-family: 'Zilla Slab Highlight', cursive; 
+    color :#686d76; 
+}
+
+.wrapper_produitsphares h1{
+    font-family: 'Zilla Slab Highlight', cursive; 
+    color :#686d76; 
+}
+

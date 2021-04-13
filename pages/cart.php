@@ -36,7 +36,7 @@ $basket = new Panier();
                     <thead>
                         <tr>
                             <th>Article</td>
-                            <th>Titre</td>
+                            <th>Nom</td>
                             <th>Prix Unitaire</td>
                             <th>Quantité</td>
                             <th>Nombre d'Articles</td>
@@ -81,7 +81,7 @@ $basket = new Panier();
     </form>
     </section>
 
-    <form action="../payement.php" method="POST">
+    <form action="../payement.php" method="POST" class="paiement">
         <input type="hidden" name="montant" value="<?= $panier->sub_total($infos->prix, $_SESSION['panier'][$infos->id_article]) ?>">
         <input id="validerpanier" type="submit" value="Payer">
     </form>

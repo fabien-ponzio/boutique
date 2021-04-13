@@ -1,111 +1,87 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-    list-style: 0;
-    text-decoration: none; 
-    /* font-family: ; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  list-style: 0;
+  text-decoration: none;
+  /* font-family: ; */
 }
 
-body{
-    background:#eeeeee;
+body {
+  background: #eeeeee;
 }
 
-.conteneur{
-    display: flex;
-    position: relative;
+.conteneur {
+  display: flex;
+  position: relative;
 }
 
-.conteneur .sidebar{
-    position: fixed; 
-    width: 200px;
-    height: 100%;
-    background: #686d76 ;
-    padding: 30px 0;
+.conteneur .sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #686d76;
+  padding: 30px 0;
+  font-size: x-large;
 }
 
-.conteneur .sidebar h2{
-    color: white; 
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px
+.conteneur .sidebar h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Zilla Slab Highlight", cursive;
+  color: #19d3da;
 }
 
-.conteneur .sidebar ul li{
-    padding: 15px; 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    border-top: 1px solid rgba(225, 225, 225, 0.05);
+.conteneur .sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(225, 225, 225, 0.05);
 }
 
-.conteneur .sidebar ul li a{
-    color: white; 
-    display: block;
+.conteneur .sidebar ul li a {
+  color: #19d3da;
+  display: block;
+  font-family: "Arvo", serif;
 }
 
-.conteneur .sidebar ul li a .fas{
-    width: 25px;
+.conteneur .sidebar ul li a .fas {
+  width: 25px;
 }
 
-.conteneur .sidebar ul li:hover{
-    background-color: #19d3da;
+.conteneur .sidebar ul li:hover {
+  background-color: #19d3da;
 }
 
-.conteneur .sidebar ul li:hover a{
-    color: #fff;
+.conteneur .sidebar ul li:hover a {
+  color: #fff;
 }
 
-.conteneur .sidebar .social_media{
-    position: absolute; 
-    left: 50%; 
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: row;
+.conteneur .sidebar .social_media {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
 }
 
-.conteneur .sidebar .social_media a{
-    display: block;
-    width: 20px;
-    background : #1e7aa5; 
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    margin: 0 5px;
-    color: #bdb8d7; 
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+.conteneur .sidebar .social_media a {
+  display: block;
+  width: 20px;
+  background: #1e7aa5;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
-.conteneur .maincontent .header{
-    padding: 20px;
-    border-bottom: 1px solid #e0e4e8;
+.conteneur .maincontent .header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e4e8;
 }
-/* Dropdown Button */
-.dropbtn {
-    background-color: #686d76;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    /* width: 200px; */
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #686d76;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: 200px;
-  }
-  
 /* Dropdown Button */
 .dropbtn {
   background-color: #686d76;
@@ -128,43 +104,123 @@ body{
   position: absolute;
   background-color: #686d76;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   width: 200px;
 }
 
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #19d3da;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #19d3da;}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #686d76;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  font-family: "Arvo", serif;
+}
 
-  .wrapper .main_content .info{
-    margin: 20px;
-    color: #717171;
-    line-height: 25px;
-  }
-  
-  .wrapper .main_content .info div{
-    margin-bottom: 20px;
-  }
-  
-  @media (max-height: 500px){
-    .social_media{
-      display: none !important;
-    }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: "Arvo", serif;
+  font-size: x-large;
+  /* width: 200px; */
+}
 
-.bouton_deco{
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #686d76;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 200px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #19d3da;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #19d3da;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  color: white;
+}
+
+.wrapper .main_content .info {
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div {
+  margin-bottom: 20px;
+}
+
+@media (max-height: 500px) {
+  .social_media {
+    display: none !important;
+  }
+}
+.bouton_deco {
   list-style: none;
+}
+
+.sidebar a:visited {
+  text-decoration: none;
+  color: #19d3da;
+}
+
+
+.sidebar a:visited:hover {
+  text-decoration: none;
+  background-color: #19d3da;
+  color: white;
+}
+
+.hello{
+  margin-top: 300px ;
+  font-family: 'Arvo', serif;
+  color: #19d3da;
+}
+
+
+.sidebar form input {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  margin-left: 32px;
+}
+
+.sidebar .logout:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
 }

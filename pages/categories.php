@@ -28,7 +28,6 @@ $nameCategorie = $categorie->getNameCategorie($_GET['id']);
 <body>
 <main class="wrapper_categories">
     <h1>Catégorie <?=$nameCategorie['nom_categorie']?></h1>
-    <?php var_dump($nameCategorie);?>
 
     <section class="wrapper_item">
     <?php 

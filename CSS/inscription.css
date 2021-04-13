@@ -84,6 +84,19 @@
     0 0 100px #03e9f4;
 }
 
+.login-box h1{
+  font-family: 'Zilla Slab Highlight', cursive;
+}
+
+.user-box label{
+  font-family: 'Arvo', serif;
+}
+.register{
+  margin-left: 20px;
+  font-family: 'Arvo', serif;
+
+}
+
 
 
 

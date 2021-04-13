@@ -45,7 +45,15 @@ if ($page=="Accueil") {?>
         <!-- LINK FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
+<!-- POLICE TITRE -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
+font-family: 'Zilla Slab Highlight', cursive; 
+<!-- POLICE TEXTE -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+font-family: 'Arvo', serif;
+
 
 
     <title>Double Bouclier -<?= $page?></title>
@@ -92,12 +100,11 @@ if ($page=="Accueil") {?>
                 <li><a href="<?=$path_index?>">Index</a></li>
                 </ul>
             <?php if(isset($_SESSION['utilisateur'])){ ?>
-            var_dump
             <span class="hello">Hello @<?= $_SESSION['utilisateur']['login']?></span>
             <li class="bouton_deco">
                 <a href="">
                     <form action="connexion.php" method="POST">
-                        <input type="submit" name="deconnexion" value="deconnexion">
+                        <input class="logout" type="submit" name="deconnexion" value="deconnexion">
                     </form>
                 </a>
             </li>

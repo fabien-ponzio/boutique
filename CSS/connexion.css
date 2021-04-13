@@ -85,3 +85,14 @@
               0 0 50px #03e9f4,
               0 0 100px #03e9f4;
 }
+.connect-box h1{
+  font-family: 'Zilla Slab Highlight', cursive;
+}
+.user-box label{
+  font-family: 'Arvo', serif;
+}
+
+.connect{
+  margin-left: 20px;
+  font-family: 'Arvo', serif;
+}

@@ -28,11 +28,10 @@ foreach($getItemsinfo as $itemInfos){?>
 <span><?= $itemInfos['nom'] ?></span>
 <span><?= $itemInfos['taille'] ?></span>
 <span><?= $itemInfos['prix']?>€</span>
-</section>
-
 <article class="addbasket">
 <a class="add addPanier" href="addpanier.php?id=<?=$id_items?>">Ajouter au panier</a>
 </article>
+</section>
 <?php
 
 }

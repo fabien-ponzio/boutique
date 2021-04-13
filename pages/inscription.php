@@ -26,7 +26,7 @@ if (isset($_POST['register'])) {
 <main>
 <div class="login-box">
   <form method="POST">
-  <h1>inscription</h1>
+  <h1>Inscription</h1>
     <div class="user-box">
       <input type="text" name="login" required="">
       <label>Login</label>
