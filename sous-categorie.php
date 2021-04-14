@@ -8,14 +8,14 @@ require 'traitement/traitement.categorie.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>souscategorie</title>
 </head>
 <body>
 <header>
 
 </header>
-<main>
+<main class="container">
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -27,7 +27,7 @@ require 'traitement/traitement.categorie.php';
             <?php for($i=0;$i<count($resultat3);$i++ ):?>
             <tr>
                 <td><?=  $resultat3[$i]['nom']; ?></td>
-                <td><button class="btn btn-default"><a href="traitement/supprimer-sscategorie.php?id=<?=$resultat3[$i]["id_sscategorie"]?>">supprimer</a></button></td>
+                <td><button class="btn btn-danger"><a href="traitement/supprimer-sscategorie.php?id=<?=$resultat3[$i]["id_sscategorie"]?>">supprimer</a></button></td>
             </tr>
             <?php endfor;?>
         </tbody>
@@ -36,7 +36,7 @@ require 'traitement/traitement.categorie.php';
     <form action="traitement/ajouter-sscategorie.php"method="POST">
     <div>
     
-        <select name="categorie" id="">
+        <select class="form-select " name="categorie" id="">
             <?php for ($i=0;$i <count($resultat);$i++):   ?>
             <option value="<?=$resultat[$i]["id_categorie"] ?>"><?=$resultat[$i]["nom_categorie"]?></option>
             <?php endfor; ?>
@@ -45,8 +45,8 @@ require 'traitement/traitement.categorie.php';
         </div>
         <div>
         <label for="">nom de la souscategorie</label>
-        <input type="text"name="nom">
-        <input class="btn btn-default" type="submit"value="Enregistrer">
+        <input class="form-control mb-3" type="text"name="nom">
+        <input  class="btn btn-success d-block m-auto" type="submit"value="Enregistrer">
         </div>
     </form>
 

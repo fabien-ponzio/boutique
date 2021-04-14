@@ -6,14 +6,14 @@ require "traitement/traitement-admin.php"; ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>color</title>
 </head>
 <body>
 <header>
 
 </header>
-    <main>
+    <main class="container">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -25,7 +25,7 @@ require "traitement/traitement-admin.php"; ?>
                 <?php for($i=0;$i<count($color);$i++) :?>
                 <tr>
                     <td><?= $color[$i]["color_name"]?></td>
-                    <td><button C><a href="traitement/supprimer.color.php?id=<?=$color[$i]["id_color"]?>">Supprimer</a></button></td>
+                    <td><button class="btn btn-danger" ><a href="traitement/supprimer.color.php?id=<?=$color[$i]["id_color"]?>">Supprimer</a></button></td>
                 </tr>
                 <?php endfor;?>
             </tbody>
@@ -46,7 +46,7 @@ require "traitement/traitement-admin.php"; ?>
     <form action="traitement/traitement-ajoutcolors.php"method="POST">
         <div>
             <label for="ajout">ajout de couleur</label>
-            <input type="text"name="color">
+            <input class="form-control"type="text"name="color">
             <input class="btn btn-primary" type="submit">
         </div>
     </form>

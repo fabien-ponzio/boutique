@@ -23,7 +23,7 @@ $article=$requette->fetchAll(PDO::FETCH_ASSOC);
 <header>
 </header>
 
-<main>
+<main class="container">
 
         
     <table class="table table-bordered">
@@ -45,8 +45,8 @@ $article=$requette->fetchAll(PDO::FETCH_ASSOC);
              <tr>
                 <td><?php echo $article[$i]["nom"]?></td>
                 <td><?php echo $article[$i]["prix"]?></td>
-                <td> <button><a href="modif.article.php?id=<?= $article[$i]["id_article"]?>">modifier</a></button></td>
-                <td> <button><a href="traitement/suprimer-article.php?id=<?=$article[$i]["id_article"]?>">supprimer</a> </button> </td>
+                <td> <button class="btn btn-warning"><a href="modif.article.php?id=<?= $article[$i]["id_article"]?>">modifier</a></button></td>
+                <td> <button class="btn btn-danger"><a href="traitement/suprimer-article.php?id=<?=$article[$i]["id_article"]?>">supprimer</a> </button> </td>
                 <td> </td>
             </tr>
             <?php endfor;?>
