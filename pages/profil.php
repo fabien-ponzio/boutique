@@ -1,4 +1,4 @@
-<?php 
+  <?php 
 $page="profil"; 
 //PATH_PAGES
 $path_index="../index.php"; 

@@ -1,3 +1,29 @@
 main{
     margin-left: 300px;
 }
+
+.userInfo{
+    display: flex;
+}
+
+.userInfo p{
+    margin-right: 5px;
+    font-size: x-large;
+}
+
+.User{
+font-family: 'Zilla Slab Highlight', cursive;
+color:#717171;
+font-size: x-large;
+}
+
+.wrapper_userInfo h1{
+    font-family: 'Zilla Slab Highlight', cursive;
+    color:#717171;
+    margin-left: 25%;
+    margin-bottom: 10%;
+}
+
+.echo{
+    font-family: 'Arvo', serif;
+}

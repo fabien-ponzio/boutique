@@ -16,7 +16,7 @@ if(isset($_GET)){
 $id_article = $_GET['id']; 
 }
 ?>
-
+<link rel="stylesheet" href="../CSS/addpanier.css">
 <section class="addpanier">
 <?php
 if (isset($id_article)) {
