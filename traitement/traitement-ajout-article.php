@@ -5,9 +5,9 @@ require '../db.php';
 
 $database=connect();
 //recuperation de donner du formulaire
-$nom= $_POST['nom'];
+$nom=$_POST['nom'];
 
-$prix= $_POST['prix'];
+$prix=$_POST['prix'];
 $categorie=$_POST['categorie'];
 $sscategorie=$_POST['souscategorie'];
 $taille=$_POST['taille'];

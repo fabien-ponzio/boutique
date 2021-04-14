@@ -9,6 +9,7 @@ require 'traitement/traitement-admin.php';
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admine</title>
 </head>
@@ -16,14 +17,15 @@ require 'traitement/traitement-admin.php';
 
 <header>
 </header>
-<main>
+<main class="container">
 <?php
-if(isset($_SESSION["sucess"])){
-    echo $_SESSION["succes"];
+if(isset($_SESSION["succes"])){
+    echo $_SESSION ["succes"];
+    
 }
 
 if(isset($_SESSION["erreur"])){
-    echo $_SESSION["erreur"];
+    echo $_SESSION ["erreur"];
 }
 
 ?>
@@ -32,19 +34,19 @@ if(isset($_SESSION["erreur"])){
 
 
 
-        <div>
+        <div class="form-group">
             <label for="nom">Nom article</label>
-            <input type="text"id="nom" name="nom">
+            <input class="form-control"  type="text"id="nom" name="nom">
         </div>
    
         <div>
             <label for="prix">prix de article</label>
-            <input type="text"id="prix" name="prix">
+            <input class="form-control"   type="text"id="prix" name="prix">
 
         </div>
         <div>
             <label for="categorie">choisir une categorie</label>
-            <select name="categorie" id="categorie">
+            <select class="form-control"  name="categorie" id="categorie">
                 <option value="">choisir une categorie</option>
                 <?php for($i=0; $i<count($categories); $i++ ):?>
                 <option value="<?=$categories[$i]["id_categorie"]?>"><?=$categories[$i]["nom_categorie"]?></option>
@@ -54,14 +56,14 @@ if(isset($_SESSION["erreur"])){
         </div>
         <div>
             <label for="souscategorie">souscategorie</label>
-            <select name="souscategorie" id="souscategorie">
+            <select class="form-control" name="souscategorie" id="souscategorie">
                     <option value="">choisir une sous categorie</option>
                     <?php for($i=0; $i<count($sscategories);$i++): ?>
                     <option value="<?=$sscategories[$i]["id_sscategorie"]?>"><?=$sscategories[$i]["nom"]?></option>
                     <?php endfor ;?>
             </select>
             <label for="taille">taille</label>
-            <select name="taille" id="taille">
+            <select class="form-control"  name="taille" id="taille">
                     <option value="">choisir ca taille</option>
                     <option value="s">S</option>
                     <option value="m">M</option>
@@ -69,7 +71,7 @@ if(isset($_SESSION["erreur"])){
                     <option value="xl">XL</option>
             </select>
                 <label for="couleur">couleur</label>
-                    <select name="couleur" id="couleur">
+                    <select class="form-control mb-4 " name="couleur" id="couleur">
                         <option value="">choisir la couleur</option>
                         <?php for($i=0;$i<count($color);$i++): ?>
                         <option value="<?=$color[$i]["id_color"]?>"><?=$color[$i]["color_name"]?></option>
@@ -77,7 +79,7 @@ if(isset($_SESSION["erreur"])){
                     </select>
         </div>
         <div>
-             <input type="submit" value="Envoyer" />
+             <input class="btn btn-primary d-block m-auto " type="submit" value="Envoyer" />
     
         </div>
     </form>

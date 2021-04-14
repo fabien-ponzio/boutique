@@ -8,14 +8,15 @@ require 'traitement/traitement.categorie.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>souscategorie</title>
 </head>
 <body>
 <header>
 
 </header>
-<main>
-    <table>
+<main class="container">
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>sous-categorie</th>
@@ -26,22 +27,27 @@ require 'traitement/traitement.categorie.php';
             <?php for($i=0;$i<count($resultat3);$i++ ):?>
             <tr>
                 <td><?=  $resultat3[$i]['nom']; ?></td>
-                <td><button><a href="traitement/supprimer-sscategorie.php?id=<?=$resultat3[$i]["id_sscategorie"]?>">supprimer</a></button></td>
+                <td><button class="btn btn-danger"><a href="traitement/supprimer-sscategorie.php?id=<?=$resultat3[$i]["id_sscategorie"]?>">supprimer</a></button></td>
             </tr>
             <?php endfor;?>
         </tbody>
 
     </table>
     <form action="traitement/ajouter-sscategorie.php"method="POST">
-        <select name="categorie" id="">
+    <div>
+    
+        <select class="form-select " name="categorie" id="">
             <?php for ($i=0;$i <count($resultat);$i++):   ?>
             <option value="<?=$resultat[$i]["id_categorie"] ?>"><?=$resultat[$i]["nom_categorie"]?></option>
             <?php endfor; ?>
 
         </select>
+        </div>
+        <div>
         <label for="">nom de la souscategorie</label>
-        <input type="text"name="nom">
-        <input type="submit"value="Enregistrer">
+        <input class="form-control mb-3" type="text"name="nom">
+        <input  class="btn btn-success d-block m-auto" type="submit"value="Enregistrer">
+        </div>
     </form>
 
 
