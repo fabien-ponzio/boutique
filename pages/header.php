@@ -105,7 +105,11 @@ if ($page=="Accueil" || $page =="admin") {?>
                     
                     <?php }?>
                     <?php if ($_SESSION['utilisateur']['droits'] == "admin") :?>
-                    <li><a href="admin.php">Espace administrateur</a></li>
+                        <?php if ($page == "Accueil") :?>
+                            <li><a href="admin.php">Espace administrateur</a></li>
+                        <?php else :?>
+                            <li><a href="../admin.php">Espace administrateur</a></li>
+                        <?php endif ;?>
                 <?php endif ;?>
                 <?php }else{
                     ?>
