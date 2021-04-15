@@ -7,12 +7,13 @@ class User
     public $password; 
     public $email; 
     public $db; 
-    private $id_droits; 
+    private $droits; 
     public $country; 
     public $city; 
     public $postCode; 
     public $street; 
-    public $number; 
+    public $number;
+
 
 
     public function __construct()
@@ -87,6 +88,7 @@ echo $error_log;
             $this->id_utilisateurs = $user['id_utilisateurs']; 
             $this->login = $user['login']; 
             $this->password = $user['password']; 
+            $this->droits = $user['droits'];
 
             $_SESSION['utilisateur'] = [
             'id_utilisateurs' =>
@@ -94,7 +96,10 @@ echo $error_log;
             'login' =>
                 $this->login, 
             'password' => 
-                $this->password               
+                $this->password, 
+            'droits'=>
+                $this->droits,
+
             ]; 
             header('location:infoUser.php');
         } else {

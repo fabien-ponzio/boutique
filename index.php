@@ -1,5 +1,5 @@
 <?php 
-var_dump($_SESSION);
+
 // PATH PAGES 
 $page="Accueil";
 $path_index =""; 

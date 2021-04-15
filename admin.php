@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 
 require 'traitement/traitement-admin.php';
@@ -17,6 +17,7 @@ require 'traitement/traitement-admin.php';
 
 <header>
 <?php  
+
 $page = "admin";
 //PATH_PAGES
 $path_index="index.php"; 
@@ -28,11 +29,14 @@ $path_cart = "pages/cart.php";
 $path_items = "pages/items.php";  
 $path_categories="categories.php"; 
 $path_souscategories="pages/souscategories.php";
-    require 'pages/header.php';
+ require 'pages/header.php';
+if ($_SESSION['utilisateur']['droits'] != "admin"){
+    header('location: index.php');
+}
 ?>
 </header>
 <main class="container">
-<h1 class="text-center">page admine</h1>
+<h1 class="text-center">Espace administrateur</h1>
 <?php
      if(isset($_SESSION["succes"])){
         echo "<p>".$_SESSION["succes"]."</p>";

@@ -63,54 +63,72 @@ if ($page=="Accueil" || $page =="admin") {?>
     <div class="sidebar">
 
         <h2>Double Bouclier</h2>
-        <?php if (isset($_SESSION['utilisateur'])){
-            ?>
+        <?php if ($page == "admin") :?>
             <ul>
-                <li><a href=<?=$path_cart?> >Panier <?= $panier->count()?></a></li>
-                <li><a href=<?=$path_info?> >Profil</a></li>
+                <li><a href="admin.php">Ajouter un article </a></li>
+                <li><a href="articles.php">Les articles </a></li>
+                <li><a href="categorie.php">Les catégories </a></li>
+                <li><a href="sous-categorie.php">Les sous-catégories </a></li>
+                <li><a href="color.php">Les couleurs </a></li>
+                <li><a href="index.php">Retour boutique</a></li>
+            </ul>
+        <?php else :?>
+            <?php if (isset($_SESSION['utilisateur'])){
+                ?>
+                <ul>
+                    <li><a href=<?=$path_cart?> >Panier <?= $panier->count()?></a></li>
+                    <li><a href=<?=$path_info?> >Profil</a></li>
 
-                <!-- DROPDOWN CATEGORIES -->
-                
-                <?php 
-                foreach ($nameCategories as $nameCategorie) {
-                    $id_category = $nameCategorie['id_categorie'];
-                ?>
-                <div class="dropdown"> 
-                <button class="dropbtn">
-                <a href="<?=$path_categories?>?id=<?= $id_category ?>">
-                <?= $nameCategorie ["nom_categorie"]?>
-                </a>
-                </button>
-                <div class="dropdown-content">
-                    <?php $sousCategory = $categorie->getSouscategories($id_category);
-                    foreach($sousCategory as $sousCat){?>
-                    <a href="<?=$path_souscategories?>?id=<?= $sousCat["id_sscategorie"] ?>"><?= $sousCat['nom'] ?></a>
-                        <?php 
-                        }
-                        ?>
+                    
+
+                    <!-- DROPDOWN CATEGORIES -->
+                    
+                    <?php 
+                    foreach ($nameCategories as $nameCategorie) {
+                        $id_category = $nameCategorie['id_categorie'];
+                    ?>
+                    <div class="dropdown"> 
+                    <button class="dropbtn">
+                    <a href="<?=$path_categories?>?id=<?= $id_category ?>">
+                    <?= $nameCategorie ["nom_categorie"]?>
+                    </a>
+                    </button>
+                    <div class="dropdown-content">
+                        <?php $sousCategory = $categorie->getSouscategories($id_category);
+                        foreach($sousCategory as $sousCat){?>
+                        <a href="<?=$path_souscategories?>?id=<?= $sousCat["id_sscategorie"] ?>"><?= $sousCat['nom'] ?></a>
+                            <?php 
+                            }
+                            ?>
+                        </div>
                     </div>
-                </div>
-                 <?php }?>
-            <?php }else{
-                ?>
-                        <ul>
-                <li><a href="<?=$path_inscription?>">Inscription</a></li>
-                <li><a href="<?=$path_connexion?>">Connexion</a></li>
+                    
+                    <?php }?>
+                    <?php if ($_SESSION['utilisateur']['droits'] == "admin") :?>
+                    <li><a href="admin.php">Espace administrateur</a></li>
+                <?php endif ;?>
+                <?php }else{
+                    ?>
+                            <ul>
+                    <li><a href="<?=$path_inscription?>">Inscription</a></li>
+                    <li><a href="<?=$path_connexion?>">Connexion</a></li>
+                    <?php } ?>
+                    <li><a href="<?=$path_index?>">Index</a></li>
+                    </ul>
+                <?php if(isset($_SESSION['utilisateur'])){ ?>
+                <span class="hello">Hello @<?= $_SESSION['utilisateur']['login']?></span>
+                <li class="bouton_deco">
+                    <a href="">
+                        <form action="connexion.php" method="POST">
+                            <input class="logout" type="submit" name="deconnexion" value="deconnexion">
+                        </form>
+                    </a>
+                </li>
                 <?php } ?>
-                <li><a href="<?=$path_index?>">Index</a></li>
-                </ul>
-            <?php if(isset($_SESSION['utilisateur'])){ ?>
-            <span class="hello">Hello @<?= $_SESSION['utilisateur']['login']?></span>
-            <li class="bouton_deco">
-                <a href="">
-                    <form action="connexion.php" method="POST">
-                        <input class="logout" type="submit" name="deconnexion" value="deconnexion">
-                    </form>
-                </a>
-            </li>
-            <?php } ?>
-            </div>
-        </ul>
+                </div>
+               
+            </ul>
+        <?php endif ;?>
 
     </div>
 </div> 

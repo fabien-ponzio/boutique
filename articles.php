@@ -19,7 +19,7 @@ $article=$requette->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <header>
 <?php
-$page ="articles";
+$page ="admin";
 
 //PATH_PAGES
 $path_index="index.php"; 
