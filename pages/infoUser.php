@@ -1,3 +1,4 @@
+
 <?php 
 // PATH PAGES 
 $path_index ="../index.php"; 

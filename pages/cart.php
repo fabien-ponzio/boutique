@@ -40,6 +40,7 @@ $basket = new Panier();
                             <th>Prix Unitaire</td>
                             <th>Quantité</td>
                             <th>Nombre d'Articles</td>
+                            <th></td>
                             <th>Sous-Total</td>
                             <th id="supp">SUPP</td>
                         </tr>
@@ -73,7 +74,6 @@ $basket = new Panier();
     <?php
         }
     ?>
-        <span id="prixtotal">Prix total = <?= $panier ->total() ?>€</span>
     <?php
     }
     ?>
@@ -83,7 +83,7 @@ $basket = new Panier();
 
     <form action="../payement.php" method="POST" class="paiement">
         <input type="hidden" name="montant" value="<?= $panier->sub_total($infos->prix, $_SESSION['panier'][$infos->id_article]) ?>">
-        <input id="validerpanier" type="submit" value="Payer">
+        <input id="validerpanier" type="submit" value="Prix total = <?= $panier ->total() ?>€">
     </form>
     </main>
 </body>
