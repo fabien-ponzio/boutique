@@ -1,9 +1,11 @@
 <?php
 ob_start(); 
 //REQUIREEEE
-if($page=="Accueil"){
+
+if($page=="Accueil" || $page == "admin"){
     require_once('class/chemins_class.php');
-    }else{
+    }
+    else{
     require_once('../class/chemins_class.php'); 
     }
 
@@ -33,7 +35,7 @@ if (isset($_POST['deconnexion'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- LINK STYLESHEET -->
 <?php
-if ($page=="Accueil") {?>
+if ($page=="Accueil" || $page =="admin") {?>
     <link rel="stylesheet" href="CSS/header.css">
     <?php
 }else{?> 

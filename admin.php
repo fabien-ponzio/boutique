@@ -16,16 +16,30 @@ require 'traitement/traitement-admin.php';
 <body>
 
 <header>
+<?php  
+$page = "admin";
+//PATH_PAGES
+$path_index="index.php"; 
+$path_inscription = "pages/inscription.php"; 
+$path_connexion = "pages/connexion.php";
+$path_info ="pages/infoUser.php"; 
+$path_profil ="pages/profif.php"; 
+$path_cart = "pages/cart.php"; 
+$path_items = "pages/items.php";  
+$path_categories="categories.php"; 
+$path_souscategories="pages/souscategories.php";
+    require 'pages/header.php';
+?>
 </header>
 <main class="container">
+<h1 class="text-center">page admine</h1>
 <?php
-if(isset($_SESSION["succes"])){
-    echo $_SESSION ["succes"];
-    
-}
+     if(isset($_SESSION["succes"])){
+        echo "<p>".$_SESSION["succes"]."</p>";
 
-if(isset($_SESSION["erreur"])){
-    echo $_SESSION ["erreur"];
+}
+    if(isset($_SESSION["erreur"])){
+        echo "<p>".$_SESSION["erreur"]."</p>";
 }
 
 ?>

@@ -8,14 +8,29 @@ require "traitement/traitement.categorie.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>modification article</title>
 </head>
 <body>
 <header>
+<?php
+    $page = "admin";
+    //PATH_PAGES
+    $path_index="index.php"; 
+    $path_inscription = "pages/inscription.php"; 
+    $path_connexion = "pages/connexion.php";
+    $path_info ="pages/infoUser.php"; 
+    $path_profil ="pages/profif.php"; 
+    $path_cart = "pages/cart.php"; 
+    $path_items = "pages/items.php";  
+    $path_categories="categories.php"; 
+    $path_souscategories="pages/souscategories.php";
+        require 'pages/header.php';
+    ?>
 
 </header>
+<h1 class="text-center">modification article</h1>
 <main class="container">
     <form class="text-center"   action="traitement/traitement-modif-article.php?id=<?= $_GET["id"]?>"method="POST">
         <div class="form-group">

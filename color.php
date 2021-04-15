@@ -6,11 +6,25 @@ require "traitement/traitement-admin.php"; ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>color</title>
 </head>
 <body>
 <header>
+<?php
+    $page = "admin";
+    //PATH_PAGES
+    $path_index="index.php"; 
+    $path_inscription = "pages/inscription.php"; 
+    $path_connexion = "pages/connexion.php";
+    $path_info ="pages/infoUser.php"; 
+    $path_profil ="pages/profif.php"; 
+    $path_cart = "pages/cart.php"; 
+    $path_items = "pages/items.php";  
+    $path_categories="categories.php"; 
+    $path_souscategories="pages/souscategories.php";
+        require 'pages/header.php';
+    ?>
 
 </header>
     <main class="container">

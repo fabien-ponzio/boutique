@@ -1,9 +1,9 @@
 <?php   
 
-var_dump($_POST);
+session_start();
 
 if (!empty($_POST['montant']) && is_numeric($_POST['montant'])) {
-    echo "ok";
+    
      // Nous appelons l'autoloader pour avoir accès à Stripe
      require_once('vendor/autoload.php');
 
@@ -36,12 +36,27 @@ if (!empty($_POST['montant']) && is_numeric($_POST['montant'])) {
     <script src="js/scripts_paiement.js"></script>
     <title>payement
     </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
 <header>
+<?php
+    $page = "admin";
+    //PATH_PAGES
+    $path_index="index.php"; 
+    $path_inscription = "pages/inscription.php"; 
+    $path_connexion = "pages/connexion.php";
+    $path_info ="pages/infoUser.php"; 
+    $path_profil ="pages/profif.php"; 
+    $path_cart = "pages/cart.php"; 
+    $path_items = "pages/items.php";  
+    $path_categories="categories.php"; 
+    $path_souscategories="pages/souscategories.php";
+        require 'pages/header.php';
+    ?>
 
 </header>
-<main>
+<main class="container">
 
 
     <form method="post">

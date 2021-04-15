@@ -1,5 +1,5 @@
 <?php
-require '../db.php';
+require '../functions/db.php';
 $database=connect();
 $ss=$_POST["nom"];
 $categorie=$_POST["categorie"];

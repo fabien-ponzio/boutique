@@ -1,7 +1,7 @@
 <?php
 
 //je me connecte a la bdd
-require '../db.php';
+require '../functions/db.php';
 
 $database=connect();
 //recuperation de donner du formulaire

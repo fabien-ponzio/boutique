@@ -1,5 +1,5 @@
 <?php
-require '../db.php';
+require '../functions/db.php';
 $database=connect();
 
 $requette=$database->prepare("SELECT * FROM `categorie`");

@@ -1,6 +1,6 @@
 
 <?php
-require '../db.php';
+require '../functions/db.php';
 
 $ajoute=$_POST['color'];
 if(!empty($ajoute)){

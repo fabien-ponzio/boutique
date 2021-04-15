@@ -13,6 +13,21 @@ require 'traitement/traitement.categorie.php';
 </head>
 <body>
 <header>
+<?php
+    $page = "admin";
+    //PATH_PAGES
+    $path_index="index.php"; 
+    $path_inscription = "pages/inscription.php"; 
+    $path_connexion = "pages/connexion.php";
+    $path_info ="pages/infoUser.php"; 
+    $path_profil ="pages/profif.php"; 
+    $path_cart = "pages/cart.php"; 
+    $path_items = "pages/items.php";  
+    $path_categories="categories.php"; 
+    $path_souscategories="pages/souscategories.php";
+        require 'pages/header.php';
+    ?>
+
 
 </header>
 <main class="container">

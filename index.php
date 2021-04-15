@@ -1,4 +1,5 @@
 <?php 
+var_dump($_SESSION);
 // PATH PAGES 
 $page="Accueil";
 $path_index =""; 
@@ -44,8 +45,8 @@ $produitPhare = $categorie->produitsPhare();
     <article class="displayItems">
 
     <?php $Pictures = $categorie->getPictures($article['id_article']); //var_dump($Pictures); ?>
-    <a href="items.php?id=<?=$article['id_article']?>"><img src="<?= $Pictures['chemin_image']?>" alt="#"></a>
-    <a href="items.php?id=<?=$article['id_article']?>"><?= $article['nom']?></a>
+    <a href="pages/items.php?id=<?=$article['id_article']?>"><img src="<?= $Pictures['chemin_image']?>" alt="#"></a>
+    <a href="pages/items.php?id=<?=$article['id_article']?>"><?= $article['nom']?></a>
     <p><?= $article['taille']?></p>
     <p><?= $article['prix']?> €</p>
 

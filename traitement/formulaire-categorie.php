@@ -1,6 +1,6 @@
 <?php
 
-require '../db.php';
+require '../functions/db.php';
 $categorie=$_POST["categorie"];
 if(!empty($categorie)){
 

@@ -1,6 +1,8 @@
 <?php
+
+
 //REQUIRE DES CLASS
-if($page=="Accueil"){
+if($page=="Accueil" || $page == "admin"){
 require_once('functions/db.php'); 
 require_once('categories.php');
 require_once('panier.php'); 
