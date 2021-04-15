@@ -19,17 +19,16 @@ $getItemsinfo = $items->getItemsinfo($id_items);
 <link rel="stylesheet" href="../CSS/items.css">
 
 <main class="wrapper_items">
-
 <section class="item">
 <?php
 foreach($getItemsinfo as $itemInfos){?>
-
+<h1>Vous choisissez : </h1>
 <img src="../<?= $itemInfos['chemin_image']?>" alt="#">
 <span><?= $itemInfos['nom'] ?></span>
 <span><?= $itemInfos['taille'] ?></span>
 <span><?= $itemInfos['prix']?>€</span>
 <article class="addbasket">
-<a class="add addPanier" href="addpanier.php?id=<?=$id_items?>">Ajouter au panier</a>
+<a class="addPanier" href="addpanier.php?id=<?=$id_items?>">Ajouter au panier</a>
 </article>
 </section>
 <?php

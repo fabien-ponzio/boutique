@@ -27,3 +27,29 @@ font-size: x-large;
 .echo{
     font-family: 'Arvo', serif;
 }
+
+.wrapper_info{
+    border: solid 1px;
+    padding: 50px;
+    margin-right: 100px;
+    box-shadow: 0 0 15px #19d3da;
+}
+
+.displayItems{
+    margin-bottom: 25px;
+}
+
+.linkUpdate{
+    margin-left: 36%;
+    font-size: 25px;
+    font-family: 'Arvo', serif;
+}
+.linkUpdate:visited{
+    text-decoration: none;
+    color: #19d3da;
+}
+
+.linkUpdate:hover{
+    text-decoration: underline;
+    color: #19d3da;
+}

@@ -7,7 +7,7 @@
 
 .wrapper_produitsphares h1{
     margin-left: 15%;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .wrapper_item{
@@ -15,9 +15,10 @@
     flex-wrap: wrap;
     flex-direction: row;
     width: 70%;
-    margin-left: 20%;
+    margin-left: 17%;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .displayItems{
@@ -63,6 +64,12 @@
     font-family: 'Arvo', serif;
 }
 
+.intro p{
+    margin-left: 40px;
+    margin-right: 60px;
+    padding : 20px;
+}
+
 .wrapper_produitsphares h2{
     margin-left: 170px;
     margin-bottom: 30px;
@@ -73,5 +80,6 @@
 .wrapper_produitsphares h1{
     font-family: 'Zilla Slab Highlight', cursive; 
     color :#686d76; 
+    font-size: 60px;
 }
 

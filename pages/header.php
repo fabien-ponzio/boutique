@@ -50,11 +50,9 @@ if ($page=="Accueil" || $page =="admin") {?>
 <!-- POLICE TITRE -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
-font-family: 'Zilla Slab Highlight', cursive; 
 <!-- POLICE TEXTE -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
-font-family: 'Arvo', serif;
 
 
 
