@@ -1,0 +1,9 @@
+h1{
+    color: #19D3DA;
+}
+#card-element{
+    margin-top: 1%;
+    border: gray 1px solid;
+    height: 5vh;
+    background-color: white;
+}

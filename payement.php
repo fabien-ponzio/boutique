@@ -31,6 +31,7 @@ if (!empty($_POST['montant']) && is_numeric($_POST['montant'])) {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/admin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://js.stripe.com/v3/"></script>
     <script src="js/scripts_paiement.js"></script>
@@ -56,13 +57,15 @@ if (!empty($_POST['montant']) && is_numeric($_POST['montant'])) {
     ?>
 
 </header>
+
 <main class="container">
+<h1 class="text-center">Passer la commande</h1>
 
 
     <form method="post">
         <div id="errors"></div>
         <Label>Nom de la carte bleu</Label>
-        <input id="cardholder-name" type="text" placeholder="Titulaire de la carte">
+        <input  class="form-control"  id="cardholder-name" type="text" placeholder="Titulaire de la carte">
         <div id="card-element">
         </div>
         <div id="card-errors" role="alert"></div>

@@ -7,8 +7,10 @@ require 'traitement/traitement.categorie.php';
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/admin.css">
     <title>souscategorie</title>
 </head>
 <body>
@@ -31,6 +33,7 @@ require 'traitement/traitement.categorie.php';
 
 </header>
 <main class="container">
+<h1 class="text-center">Les sous categories</h1>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -61,7 +64,7 @@ require 'traitement/traitement.categorie.php';
         <div>
         <label for="">nom de la souscategorie</label>
         <input class="form-control mb-3" type="text"name="nom">
-        <input  class="btn btn-success d-block m-auto" type="submit"value="Enregistrer">
+        <input  class="btn btn-info d-block m-auto" type="submit"value="Enregistrer">
         </div>
     </form>
 
