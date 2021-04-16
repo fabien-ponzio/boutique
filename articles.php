@@ -16,6 +16,16 @@ $article=$requette->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    
+  
+
+
+
+   
     <title>article</title>
 </head>
 <body>
@@ -43,7 +53,7 @@ require "pages/header.php";
 <h1  class="text-center">Les articles</h1>
 
         
-    <table class="table table-bordered">
+    <table class="table table-bordered  w-75 ml-auto mr-auto mt-5">
         <thead>
             <tr>
                 <th>article</th>

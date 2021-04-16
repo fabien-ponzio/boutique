@@ -29,8 +29,8 @@
     ?>
 </header>
 <main class="container">
-<h1 class="text-center"> Les categorie</h1>
-    <table class="table table-bordered"> 
+<h1 class="text-center"> Les categories</h1>
+    <table class="table table-bordered w-50 ml-auto mr-auto mt-5"> 
         <tr>
             <td>nom</td>
             <td>suprimer</td>
@@ -54,10 +54,10 @@
 
     ?>
 
-    <form action="traitement/formulaire-categorie.php"method="POST">
-        <label for="categorie">non de categorie</label>
+    <form class="w-50 m-auto" action="traitement/formulaire-categorie.php"method="POST">
+        <label for="categorie">nom de categorie</label>
         <input class="form-control" type="text"name="categorie">
-        <input  class="btn btn-info d-block m-auto" type="submit">
+        <input  class="btn btn-info d-block ml-auto mr-auto mt-4" type="submit">
     </form>
 
 </main>

@@ -1,9 +1,27 @@
 h1{
-    color: #19D3DA;
+    color:  #686d76;
+   
+    font-family: "Zilla Slab Highlight", cursive;
 }
 #card-element{
     margin-top: 1%;
     border: gray 1px solid;
     height: 5vh;
     background-color: white;
+}
+th{
+
+color:  #686d76;
+   
+    font-family: "Arvo", serif;
+}
+label{
+    color:  #686d76;
+   
+    font-family: "Arvo", serif;
+}
+td{
+    color:  #686d76;
+   
+    font-family: "Arvo", serif;
 }

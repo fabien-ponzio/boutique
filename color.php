@@ -30,7 +30,7 @@ require "traitement/traitement-admin.php"; ?>
 </header>
     <main class="container">
     <h1 class="text-center">Les couleurs</h1>
-        <table class="table table-bordered">
+        <table class="table table-bordered w-50 ml-auto mr-auto mt-5">
             <thead>
                 <tr>
                     <th>Nom</th>
@@ -59,11 +59,11 @@ require "traitement/traitement-admin.php"; ?>
     ?>
 
 
-    <form action="traitement/traitement-ajoutcolors.php"method="POST">
+    <form class="w-50 ml-auto mr-auto mt-5" action="traitement/traitement-ajoutcolors.php"method="POST">
         <div>
             <label for="ajout">ajout de couleur</label>
             <input class="form-control"type="text"name="color">
-            <input class="btn btn-info d-block m-auto" type="submit">
+            <input class="btn btn-info d-block  ml-auto mr-auto mt-2" type="submit">
         </div>
     </form>
 

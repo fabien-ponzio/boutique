@@ -12,7 +12,7 @@ require 'traitement/traitement-admin.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="css/admin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admine</title>
+    <title>admin</title>
 </head>
 <body>
 
@@ -37,7 +37,7 @@ if ($_SESSION['utilisateur']['droits'] != "admin"){
 ?>
 </header>
 <main class="container">
-<h1 class="text-center">Espace administrateur</h1>
+<h1 class="text-center">Ajouter un article</h1>
 <?php
      if(isset($_SESSION["succes"])){
         echo "<p>".$_SESSION["succes"]."</p>";
@@ -48,7 +48,7 @@ if ($_SESSION['utilisateur']['droits'] != "admin"){
 }
 
 ?>
-    <form action=traitement/traitement-ajout-article.php method="POST">
+    <form class="w-50 ml-auto mr-auto  mt-5" action=traitement/traitement-ajout-article.php method="POST">
 
 
 

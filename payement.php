@@ -1,6 +1,6 @@
 <?php   
 
-session_start();
+
 
 if (!empty($_POST['montant']) && is_numeric($_POST['montant'])) {
     
@@ -34,7 +34,7 @@ if (!empty($_POST['montant']) && is_numeric($_POST['montant'])) {
     <link rel="stylesheet" href="css/admin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="js/scripts_paiement.js"></script>
+    <!-- <script src="js/scripts_paiement.js"></script> -->
     <title>payement
     </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
