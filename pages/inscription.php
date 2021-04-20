@@ -2,7 +2,8 @@
 //REQUIRE
 $page="inscription";
 
-// PATH PAGES 
+// PATH PAGES
+$path_LOGO ="../image/logobb-bleu.png"; 
 $path_index="../index.php"; 
 $path_inscription = ""; 
 $path_connexion = "connexion.php";

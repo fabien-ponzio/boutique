@@ -1,6 +1,7 @@
 <?php 
 $page="connexion"; 
 // PATH PAGES 
+$path_LOGO ="../image/logobb-bleu.png"; 
 $path_index="../index.php"; 
 $path_inscription = "inscription.php"; 
 $path_connexion = "connexion.php";

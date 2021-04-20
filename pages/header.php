@@ -18,7 +18,7 @@ if (isset($_POST['deconnexion'])) {
     $user = new User(); 
     $user->Disconnect(); 
     if ($page==="Accueil") {
-    header('location:index.php'); 
+    header('location: index.php'); 
     }else{
     header('location:connexion.php'); 
     }
@@ -43,8 +43,8 @@ if ($page=="Accueil") {?>
         <!-- LINK BOOTSTRAP -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
         <!-- LINK FONTAWESOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- POLICE TITRE -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet">
@@ -60,9 +60,14 @@ if ($page=="Accueil") {?>
 <div class="conteneur">
     <div class="sidebar">
 
+<<<<<<< Updated upstream
         <h2>Double Bouclier</h2>
         <?php if (isset($_SESSION['utilisateur'])){
             ?>
+=======
+        <img class="LOGO" src="<?= $path_LOGO ?>" alt="">
+        <?php if ($page == "admin") :?>
+>>>>>>> Stashed changes
             <ul>
                 <li><a href=<?=$path_cart?> >Panier <?= $panier->count()?></a></li>
                 <li><a href=<?=$path_info?> >Profil</a></li>
@@ -87,6 +92,36 @@ if ($page=="Accueil") {?>
                         }
                         ?>
                     </div>
+<<<<<<< Updated upstream
+=======
+                    
+                    <?php }?>
+                    <?php if ($_SESSION['utilisateur']['droits'] == "admin") :?>
+                        <?php if ($page == "Accueil") :?>
+                            <li><a href="admin.php">Espace administrateur</a></li>
+                        <?php else :?>
+                            <li><a href="../admin.php">Espace administrateur</a></li>
+                        <?php endif ;?>
+                <?php endif ;?>
+                <?php }else{
+                    ?>
+                            <ul>
+                    <li><a href="<?=$path_inscription?>">Inscription</a></li>
+                    <li><a href="<?=$path_connexion?>">Connexion</a></li>
+                    <?php } ?>
+                    <li><a href="<?=$path_index?>">Index</a></li>
+                    </ul>
+                <?php if(isset($_SESSION['utilisateur'])){ ?>
+                <span class="hello">Hello @<?= $_SESSION['utilisateur']['login']?></span>
+                <li class="bouton_deco">
+                    <a href="">
+                        <form action="<?php echo $path_connexion ; ?>" method="POST">
+                            <input class="logout" type="submit" name="deconnexion" value="deconnexion">
+                        </form>
+                    </a>
+                </li>
+                <?php } ?>
+>>>>>>> Stashed changes
                 </div>
                  <?php }?>
             <?php }else{
