@@ -22,7 +22,7 @@ if (isset($_POST['deconnexion'])) {
     if ($page==="Accueil") {
     header('location:index.php'); 
     }else{
-    header('location:connexion.php'); 
+    header('location:../pages/connexion.php'); 
     }
 }
 //var_dump($nameCategories); 
@@ -123,7 +123,7 @@ if ($page=="Accueil" || $page =="admin") {?>
                 <span class="hello">Hello @<?= $_SESSION['utilisateur']['login']?></span>
                 <li class="bouton_deco">
                     <a href="">
-                        <form action="connexion.php" method="POST">
+                        <form action="" method="POST">
                             <input class="logout" type="submit" name="deconnexion" value="deconnexion">
                         </form>
                     </a>
