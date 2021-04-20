@@ -16,6 +16,7 @@ require "traitement/traitement-admin.php"; ?>
     $page = "admin";
     //PATH_PAGES
     $path_index="index.php"; 
+    $path_LOGO ="./image/logobb-bleu.png";
     $path_inscription = "pages/inscription.php"; 
     $path_connexion = "pages/connexion.php";
     $path_info ="pages/infoUser.php"; 

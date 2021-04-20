@@ -62,7 +62,7 @@ if ($page=="Accueil" || $page =="admin") {?>
 <div class="conteneur">
     <div class="sidebar">
 
-        <h2>Double Bouclier</h2>
+    <img  class="LOGO" src="<?= $path_LOGO ?>" alt="">
         <?php if ($page == "admin") :?>
             <ul>
                 <li><a href="admin.php">Ajouter un article </a></li>

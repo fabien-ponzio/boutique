@@ -45,6 +45,8 @@ if (!empty($_POST['montant']) && is_numeric($_POST['montant'])) {
     $page = "admin";
     //PATH_PAGES
     $path_index="index.php"; 
+    $path_LOGO ="./image/logobb-bleu.png";
+
     $path_inscription = "pages/inscription.php"; 
     $path_connexion = "pages/connexion.php";
     $path_info ="pages/infoUser.php"; 

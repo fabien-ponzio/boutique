@@ -5,6 +5,7 @@ $page="inscription";
 // PATH PAGES 
 $path_index="../index.php"; 
 $path_inscription = ""; 
+$path_LOGO ="../image/logobb-bleu.png";
 $path_connexion = "connexion.php";
 $path_info ="infoUser.php"; 
 $path_profil ="profil.php"; 

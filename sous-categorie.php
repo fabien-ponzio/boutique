@@ -24,6 +24,7 @@ require 'traitement/traitement.categorie.php';
 <?php
     $page = "admin";
     //PATH_PAGES
+    $path_LOGO ="./image/logobb-bleu.png";
     $path_index="index.php"; 
     $path_inscription = "pages/inscription.php"; 
     $path_connexion = "pages/connexion.php";

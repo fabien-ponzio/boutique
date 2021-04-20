@@ -16,6 +16,7 @@ require "traitement/traitement.categorie.php";
 <header>
 <?php
     $page = "admin";
+    $path_LOGO ="./image/logobb-bleu.png";
     //PATH_PAGES
     $path_index="index.php"; 
     $path_inscription = "pages/inscription.php"; 
